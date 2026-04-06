@@ -1,0 +1,209 @@
+/* ============================================
+   FONTS — TOTAL EQUINES
+   Couture: titles, headings, brand text
+   Montserrat: all body text, UI, labels
+============================================ */
+
+/* @import must come first */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+@font-face {
+  font-family: 'Couture';
+  src: url('/assets/fonts/couture-bld.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global font enforcement */
+*, *::before, *::after {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6,
+.font-display,
+.font-heading,
+[class*="font-display"],
+[class*="font-heading"] {
+  font-family: 'Couture', sans-serif !important;
+  text-transform: uppercase !important;
+}
+
+:root {
+  --color-gold: #c9a84c;
+  --color-gold-light: #e8c97a;
+  --color-gold-dark: #a07830;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  background: linear-gradient(
+    160deg,
+    #0a0a0a 0%,
+    #111111 25%,
+    #0d0d0d 50%,
+    #131313 75%,
+    #0a0a0a 100%
+  );
+  background-attachment: fixed;
+  min-height: 100%;
+}
+
+body {
+  @apply font-body text-white antialiased overflow-x-hidden;
+  margin: 0;
+  background: transparent;
+  min-height: 100vh;
+}
+
+#root {
+  background: transparent;
+  min-height: 100vh;
+}
+
+::selection {
+  @apply bg-gold text-black;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1c1c1c;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c9a84c;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e8c97a;
+}
+
+/* Utility classes */
+.gold-gradient {
+  background: linear-gradient(135deg, #e8c97a 0%, #c9a84c 50%, #a07830 100%);
+}
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, #e8c97a 0%, #c9a84c 50%, #a07830 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section-padding {
+  padding: 6rem 0;
+}
+
+.container-custom {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/* Hide scrollbar for horizontal scroll containers */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Noise texture overlay */
+.noise-overlay::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.03;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+}
+
+/* GPU compositing for fixed/sticky elements */
+.fixed,
+.sticky,
+[class*="fixed"],
+[class*="sticky"] {
+  transform: translateZ(0);
+}
+
+/* GPU layer for images */
+img {
+  transform: translateZ(0);
+}
+
+/* Safari overflow-hidden + border-radius GPU fix */
+.overflow-hidden {
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+}
+
+/* Subtle section tint for alternating depth */
+.section-tint {
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.025) 20%,
+    rgba(255, 255, 255, 0.025) 80%,
+    transparent 100%
+  );
+}
+
+/* Reusable bottom image fade */
+.img-fade-bottom {
+  position: relative;
+}
+.img-fade-bottom::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.1) 40%, transparent 70%);
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+/* GPU compositing for animated & card elements */
+[data-animated] {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+.rounded-2xl,
+.rounded-3xl {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Infinite marquee carousel */
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+  will-change: transform;
+  display: flex;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
