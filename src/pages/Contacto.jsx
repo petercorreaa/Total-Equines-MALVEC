@@ -388,10 +388,16 @@ function ContactInfo({ t }) {
         {/* Block 2 — Social */}
         <h4 className="mt-10 font-display uppercase text-3xl text-white" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>{t('contacto.social_title')}</h4>
         <div className="mt-4 flex gap-3">
-          {[FiInstagram, FiFacebook, FiYoutube].map((Icon, i) => (
+          {[
+            { Icon: FiInstagram, href: 'https://www.instagram.com/totalequines?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==', label: 'Instagram' },
+            { Icon: FiFacebook, href: '#', label: 'Facebook' },
+            { Icon: FiYoutube, href: '#', label: 'YouTube' },
+          ].map(({ Icon, href, label }) => (
             <a
-              key={i}
-              href="#"
+              key={label}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
               className="rounded-full border border-gray-700 p-3 text-gray-400 transition-all duration-300 hover:border-gold hover:text-gold"
             >
               <Icon size={20} />

@@ -4,14 +4,6 @@ const slice1 = horses.slice(0, 8).map((h) => h.id);
 const slice2 = horses.slice(8, 16).map((h) => h.id);
 const slice3 = horses.slice(16, 23).map((h) => h.id);
 
-function buildBids(ids, base) {
-  const bids = {};
-  ids.forEach((id, i) => {
-    bids[id] = base[i];
-  });
-  return bids;
-}
-
 export const auctions = [
   {
     id: 'subasta-otono-2025',
@@ -26,7 +18,6 @@ export const auctions = [
     description:
       'Nuestra subasta más importante del año. Presentamos una selección excepcional de 8 ejemplares criados en Total Equines, incluyendo yeguas de alto rendimiento y castrados con experiencia en Palermo.',
     horseIds: slice1,
-    startingBids: buildBids(slice1, [12000, 18000, 20000, 10000, 22000, 25000, 9000, 28000]),
     image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80',
     registrationLink: '#',
   },
@@ -43,7 +34,6 @@ export const auctions = [
     description:
       'El evento ecuestre más esperado del año. Cierre de temporada con los mejores ejemplares de nuestra producción anual. Incluye visita a la estancia, almuerzo y recorrido por las instalaciones.',
     horseIds: slice2,
-    startingBids: buildBids(slice2, [16000, 15000, 14000, 11000, 15000, 19000, 12000, 8000]),
     image: 'https://images.unsplash.com/photo-1534307671554-9a6d81f4d629?w=1200&q=80',
     registrationLink: '#',
   },
@@ -58,14 +48,11 @@ export const auctions = [
     status: 'closed',
     registrationOpen: false,
     description:
-      'Nuestra subasta de primavera 2024 fue un éxito rotundo con la participación de compradores de 8 países. Se vendieron los 7 ejemplares presentados con un promedio de USD 22.400.',
+      'Nuestra subasta de primavera 2024 fue un éxito rotundo con la participación de compradores de 8 países. Se vendieron los 7 ejemplares presentados.',
     horseIds: slice3,
-    startingBids: buildBids(slice3, [15000, 8000, 12000, 30000, 9000, 18000, 17000]),
     image: 'https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=1200&q=80',
     results: {
       totalSold: 7,
-      averagePrice: 22400,
-      highestSale: { horseName: 'Tempestad del Sur', price: 38000 },
       countries: [
         'Argentina',
         'Reino Unido',

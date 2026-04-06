@@ -33,9 +33,7 @@ function AuctionCard({ auction, variant = 'upcoming' }) {
   const horseChips = auction.horseIds
     .map((id) => {
       const horse = getHorseById(id);
-      return horse
-        ? { name: horse.name, bid: auction.startingBids[id] }
-        : null;
+      return horse ? { name: horse.name } : null;
     })
     .filter(Boolean);
 
@@ -109,11 +107,6 @@ function AuctionCard({ auction, variant = 'upcoming' }) {
                   className="flex-shrink-0 rounded-xl border border-gray-700 bg-white/[0.05] px-4 py-2 font-body text-xs text-white transition-colors hover:border-gold/40"
                 >
                   {chip.name}
-                  {chip.bid && (
-                    <span className="ml-2 text-gold">
-                      USD {chip.bid.toLocaleString('es-AR')}
-                    </span>
-                  )}
                 </span>
               ))}
             </div>
@@ -125,31 +118,13 @@ function AuctionCard({ auction, variant = 'upcoming' }) {
               <p className="font-body text-xs uppercase tracking-widest text-gold">
                 {t('subastas.results_title')}
               </p>
-              <div className="mt-4 grid grid-cols-3 gap-4">
-                <div>
-                  <p className="font-display uppercase text-3xl text-white" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>
-                    {auction.results.totalSold}
-                  </p>
-                  <p className="font-body text-xs text-gray-500">
-                    {t('subastas.results_sold')}
-                  </p>
-                </div>
-                <div>
-                  <p className="font-display uppercase text-3xl text-white" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>
-                    USD {auction.results.averagePrice.toLocaleString('es-AR')}
-                  </p>
-                  <p className="font-body text-xs text-gray-500">
-                    {t('subastas.results_avg')}
-                  </p>
-                </div>
-                <div>
-                  <p className="font-display uppercase text-3xl text-white" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>
-                    USD {auction.results.highestSale.price.toLocaleString('es-AR')}
-                  </p>
-                  <p className="font-body text-xs text-gray-500">
-                    {t('subastas.results_max')}
-                  </p>
-                </div>
+              <div className="mt-4">
+                <p className="font-display uppercase text-3xl text-white" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>
+                  {auction.results.totalSold}
+                </p>
+                <p className="font-body text-xs text-gray-500">
+                  {t('subastas.results_sold')}
+                </p>
               </div>
               <p className="mt-4 font-body text-sm text-gray-400">
                 {t('subastas.results_countries')}: {auction.results.countries.join(', ')}

@@ -82,7 +82,7 @@ export default function Footer() {
               </p>
 
               <div className="flex items-center gap-3">
-                <SocialIcon href="https://instagram.com" icon={FaInstagram} label="Instagram" />
+                <SocialIcon href="https://www.instagram.com/totalequines?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" icon={FaInstagram} label="Instagram" />
                 <SocialIcon href="https://facebook.com" icon={FaFacebookF} label="Facebook" />
                 <SocialIcon href="https://wa.me/" icon={FaWhatsapp} label="WhatsApp" />
               </div>

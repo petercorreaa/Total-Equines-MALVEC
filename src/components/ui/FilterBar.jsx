@@ -19,18 +19,10 @@ export default function FilterBar({ filters, setFilters, resultCount }) {
     { value: '9-12', label: t('ventas.filter_age_senior') },
   ];
 
-  const priceOptions = [
-    { value: '', label: t('ventas.filter_price_all') },
-    { value: 'low', label: t('ventas.filter_price_low') },
-    { value: 'mid', label: t('ventas.filter_price_mid') },
-    { value: 'high', label: t('ventas.filter_price_high') },
-    { value: 'consultar', label: t('ventas.filter_price_consultar') },
-  ];
-
   const handleReset = () =>
-    setFilters({ sex: '', age: '', color: '', price: '' });
+    setFilters({ sex: '', age: '', color: '' });
 
-  const hasFilters = filters.sex || filters.age || filters.color || filters.price;
+  const hasFilters = filters.sex || filters.age || filters.color;
 
   return (
     <div className="sticky top-[72px] z-40 border-b border-gold/15 bg-gray-900/95 backdrop-blur-md">
@@ -83,19 +75,6 @@ export default function FilterBar({ filters, setFilters, resultCount }) {
             <option value="">{t('ventas.filter_color')}: {t('ventas.filter_all')}</option>
             {colors.map((c) => (
               <option key={c} value={c}>{c}</option>
-            ))}
-          </select>
-
-          {/* Price select */}
-          <select
-            value={filters.price}
-            onChange={(e) => setFilters((f) => ({ ...f, price: e.target.value }))}
-            className="rounded-xl border border-gray-600 bg-gray-800 px-4 py-2 font-body text-sm text-white transition-colors focus:border-gold/50 focus:outline-none"
-          >
-            {priceOptions.map((opt) => (
-              <option key={opt.value} value={opt.value}>
-                {opt.value === '' ? `${t('ventas.filter_price')}: ${opt.label}` : opt.label}
-              </option>
             ))}
           </select>
 

@@ -20,16 +20,9 @@ function CheckIcon() {
   );
 }
 
-function formatPrice(price) {
-  if (price === null) return null;
-  return `USD ${price.toLocaleString('es-AR')}`;
-}
-
 /* ─── Hero ─── */
 
 function HeroSection({ horse, t }) {
-  const formattedPrice = formatPrice(horse.price);
-
   return (
     <section className="relative h-screen w-full overflow-hidden">
       <ImageCarousel images={horse.images} horseName={horse.name} />
@@ -85,16 +78,6 @@ function HeroSection({ horse, t }) {
           ))}
         </div>
 
-        {/* Price */}
-        <div className="mt-6">
-          {formattedPrice ? (
-            <p className="font-display uppercase text-5xl text-gold" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>{formattedPrice}</p>
-          ) : (
-            <p className="font-display uppercase text-4xl text-gold" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>
-              {t('ventas.detail_consultar_precio')}
-            </p>
-          )}
-        </div>
       </motion.div>
     </section>
   );
@@ -112,7 +95,6 @@ function DetailsSection({ horse, t }) {
     { label: t('ventas.detail_height'), value: `${horse.heightHH} HH` },
   ];
 
-  const formattedPrice = formatPrice(horse.price);
   const waText = encodeURIComponent(`${t('ventas.detail_wa_message')} ${horse.name}`);
 
   const handleCopyLink = () => {
@@ -196,13 +178,6 @@ function DetailsSection({ horse, t }) {
                 <h3 className="font-heading uppercase text-xl font-semibold text-white" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>
                   {horse.name}
                 </h3>
-                {formattedPrice ? (
-                  <p className="mt-2 font-display uppercase text-4xl text-gold" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>{formattedPrice}</p>
-                ) : (
-                  <p className="mt-2 font-display uppercase text-3xl text-gold" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>
-                    {t('ventas.detail_consultar_precio')}
-                  </p>
-                )}
 
                 <div className="my-6 h-px bg-gray-700" />
 
@@ -252,9 +227,6 @@ function DetailsSection({ horse, t }) {
                   </div>
                 </div>
 
-                <p className="mt-4 font-body text-xs text-gray-500">
-                  {t('ventas.detail_disclaimer')}
-                </p>
               </div>
             </AnimatedSection>
           </div>
@@ -269,7 +241,7 @@ function DetailsSection({ horse, t }) {
 function RelatedSection({ horse, t }) {
   const related = useMemo(() => {
     return horses
-      .filter((h) => h.id !== horse.id && (h.sex === horse.sex || (h.price && horse.price && Math.abs(h.price - horse.price) < 8000)))
+      .filter((h) => h.id !== horse.id && h.sex === horse.sex)
       .slice(0, 3);
   }, [horse]);
 

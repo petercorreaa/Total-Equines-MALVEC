@@ -137,7 +137,6 @@ export default function Ventas() {
     sex: '',
     age: '',
     color: '',
-    price: '',
   });
 
   const filteredHorses = useMemo(() => {
@@ -150,23 +149,6 @@ export default function Ventas() {
       }
 
       if (filters.color && h.color !== filters.color) return false;
-
-      if (filters.price) {
-        switch (filters.price) {
-          case 'low':
-            if (!h.price || h.price > 15000) return false;
-            break;
-          case 'mid':
-            if (!h.price || h.price < 15000 || h.price > 25000) return false;
-            break;
-          case 'high':
-            if (!h.price || h.price <= 25000) return false;
-            break;
-          case 'consultar':
-            if (h.price !== null) return false;
-            break;
-        }
-      }
 
       return true;
     });
@@ -215,7 +197,7 @@ export default function Ventas() {
                 {t('ventas.filter_empty')}
               </p>
               <button
-                onClick={() => setFilters({ sex: '', age: '', color: '', price: '' })}
+                onClick={() => setFilters({ sex: '', age: '', color: '' })}
                 className="mt-6 rounded-full border border-gold/40 px-8 py-3 font-body text-xs uppercase tracking-widest text-gold transition-all duration-300 hover:bg-gold hover:text-black"
               >
                 {t('ventas.filter_reset')}

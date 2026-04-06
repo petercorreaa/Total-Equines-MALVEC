@@ -5,9 +5,6 @@ import AnimatedSection from '@/components/ui/AnimatedSection';
 
 function HorseCard({ horse, delay = 0 }) {
   const { t } = useTranslation();
-  const formattedPrice = horse.price
-    ? `USD ${horse.price.toLocaleString('es-AR')}`
-    : t('ventas.consultar');
 
   return (
     <AnimatedSection delay={delay}>
@@ -52,10 +49,6 @@ function HorseCard({ horse, delay = 0 }) {
                 <p className="font-body text-sm text-gray-400">{horse.heightHH} HH</p>
               </div>
             </div>
-
-            <p className={`mt-4 font-heading uppercase text-2xl font-semibold ${horse.price ? 'text-white' : 'text-gold'}`} style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>
-              {formattedPrice}
-            </p>
 
             <div className="mt-4 w-full rounded-2xl border border-gold/40 py-3 text-center font-body text-xs uppercase tracking-widest text-gold transition-all duration-300 group-hover:bg-gold group-hover:text-black">
               {t('ventas.card_ver_ficha')}

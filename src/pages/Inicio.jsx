@@ -20,7 +20,6 @@ const previewHorses = [
     sex: 'Castrado',
     color: 'Zaino',
     heightHH: 15.1,
-    price: 18000,
     images: [
       'https://images.unsplash.com/photo-1534307671554-9a6d81f4d629?w=600&q=80',
       'https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=600&q=80',
@@ -34,7 +33,6 @@ const previewHorses = [
     sex: 'Yegua',
     color: 'Tordillo',
     heightHH: 14.3,
-    price: 24000,
     images: [
       'https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=600&q=80',
       'https://images.unsplash.com/photo-1601758124510-52d02ddb7cbd?w=600&q=80',
@@ -48,7 +46,6 @@ const previewHorses = [
     sex: 'Yegua',
     color: 'Alazán',
     heightHH: 15.0,
-    price: null,
     images: [
       'https://images.unsplash.com/photo-1601758124510-52d02ddb7cbd?w=600&q=80',
       'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80',
@@ -93,9 +90,7 @@ function HeroSection({ t }) {
   return (
     <section className="relative h-screen w-full overflow-hidden">
       {/* Video Background */}
-      <HeroVideo
-        fallbackImage="https://images.unsplash.com/photo-1534307671554-9a6d81f4d629?w=1920&q=80"
-      />
+      <HeroVideo />
 
       {/* Layer 1 — Base dark veil */}
       <div className="absolute inset-0 bg-black/50 pointer-events-none" />
@@ -182,7 +177,7 @@ function HeroSection({ t }) {
       {/* Bottom right — social icons */}
       <div className="absolute bottom-10 right-8 z-10 flex items-center gap-4">
         <a
-          href="https://instagram.com"
+          href="https://www.instagram.com/totalequines?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Instagram"
