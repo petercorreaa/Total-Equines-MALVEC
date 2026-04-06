@@ -69,6 +69,19 @@ Update these placeholder values across the site:
 | Email | `Contacto.jsx`, `Footer.jsx` | `contacto@totalequines.com.ar` |
 | Social media links | `Contacto.jsx`, `Footer.jsx` | `#` placeholders |
 
+## Video Assets
+
+Hero video is not included in the repository due to file size.
+Place the following files in `public/assets/videos/`:
+- hero-optimized.mp4 (compressed MP4, recommended)
+- hero.webm (WebM version for Chrome/Firefox)
+- hero.mp4 (original fallback)
+
+To compress the video run:
+```bash
+ffmpeg -i "hero.mp4" -vcodec libx264 -crf 28 -preset slow -vf "scale=1920:-2" -movflags +faststart -an "hero-optimized.mp4"
+```
+
 ### Replacing Placeholder Images
 
 All images currently use Unsplash URLs. To replace with real photos:

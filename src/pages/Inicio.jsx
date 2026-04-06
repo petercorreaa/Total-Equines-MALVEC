@@ -8,6 +8,7 @@ import GoldDivider from '@/components/ui/GoldDivider';
 import HorseCard from '@/components/ui/HorseCard';
 import CertificationCarousel from '@/components/ui/CertificationCarousel';
 import SEOMeta from '@/components/layout/SEOMeta';
+import HeroVideo from '@/components/ui/HeroVideo';
 
 /* ─── Data ─── */
 
@@ -91,14 +92,10 @@ function HeroSection({ t }) {
 
   return (
     <section className="relative h-screen w-full overflow-hidden">
-      {/* Background image */}
-      <div className="absolute inset-0">
-        <img loading="eager" decoding="async" fetchpriority="high"
-          src="https://images.unsplash.com/photo-1534307671554-9a6d81f4d629?w=1920&q=80"
-          alt=""
-          className="h-full w-full object-cover"
-        />
-      </div>
+      {/* Video Background */}
+      <HeroVideo
+        fallbackImage="https://images.unsplash.com/photo-1534307671554-9a6d81f4d629?w=1920&q=80"
+      />
 
       {/* Layer 1 — Base dark veil */}
       <div className="absolute inset-0 bg-black/50 pointer-events-none" />
