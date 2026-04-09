@@ -86,7 +86,7 @@ function HeroSection({ t }) {
         </motion.p>
         <motion.h1
           variants={fadeUp}
-          className="font-display uppercase text-5xl tracking-[0.08em] text-white sm:text-7xl lg:text-9xl"
+          className="font-display uppercase text-4xl tracking-[0.08em] text-white sm:text-7xl lg:text-9xl"
           style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}
         >
           {t('lacria.hero_title')}
@@ -143,7 +143,7 @@ function IntroSection({ t }) {
 function PathCard({ image, label, title, text, cta, to, direction, t }) {
   return (
     <AnimatedSection direction={direction} className="flex-1">
-      <Link to={to} className="group relative block min-h-[500px] cursor-pointer overflow-hidden rounded-3xl">
+      <Link to={to} className="group relative block min-h-[360px] cursor-pointer overflow-hidden rounded-3xl">
         <div className="absolute inset-0 overflow-hidden rounded-3xl">
           <img decoding="async"
             src={image}
@@ -155,11 +155,11 @@ function PathCard({ image, label, title, text, cta, to, direction, t }) {
         <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent pointer-events-none rounded-3xl" />
         <div className="absolute inset-0 rounded-3xl border-2 border-transparent transition-colors duration-400 group-hover:border-gold/50" />
 
-        <div className="relative z-10 flex h-full min-h-[500px] flex-col justify-end p-10">
+        <div className="relative z-10 flex h-full min-h-[360px] flex-col justify-end p-6 sm:p-10">
           <span className="mb-3 font-body text-xs tracking-[0.4em] uppercase text-gold">
             {label}
           </span>
-          <h3 className="font-display uppercase text-4xl text-white sm:text-5xl" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>
+          <h3 className="font-display uppercase text-3xl sm:text-5xl text-white" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>
             {title}
           </h3>
           <p className="mt-3 font-body text-base text-white/70">
@@ -212,7 +212,7 @@ function PhilosophySection({ t }) {
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
           {philosophyPillars.map((pillar, i) => (
             <AnimatedSection key={pillar.num} delay={i * 0.1}>
-              <div className="rounded-2xl border border-gold/15 bg-white/[0.04] backdrop-blur-sm p-8">
+              <div className="rounded-2xl border border-gold/15 bg-white/[0.04] backdrop-blur-sm p-5 sm:p-8">
                 <span className="font-display uppercase text-5xl text-gold/30" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>
                   {pillar.num}
                 </span>

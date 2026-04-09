@@ -108,7 +108,7 @@ function HeroSection({ t }) {
         </motion.p>
         <motion.h1
           variants={fadeUp}
-          className="font-display uppercase text-5xl tracking-[0.08em] text-white sm:text-7xl lg:text-8xl"
+          className="font-display uppercase text-4xl tracking-[0.08em] text-white sm:text-7xl lg:text-8xl"
           style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}
         >
           {t('nosotros.hero_title')}
@@ -150,12 +150,12 @@ function BrandStorySection({ t }) {
   return (
     <section className="section-padding bg-transparent">
       <div className="container-custom">
-        <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-5">
+        <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-5 lg:gap-16">
           <AnimatedSection direction="left" className="lg:col-span-3">
             <span className="mb-4 inline-block font-body text-xs tracking-[0.4em] uppercase text-gold">
               {t('nosotros.story_label')}
             </span>
-            <h2 className="font-display uppercase text-4xl text-white sm:text-5xl" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>
+            <h2 className="font-display uppercase text-3xl sm:text-4xl text-white" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>
               {t('nosotros.story_title')}
             </h2>
             <div className="my-6 h-0.5 w-16 rounded-full bg-gold" />
@@ -181,7 +181,7 @@ function BrandStorySection({ t }) {
                   className="w-full rounded-3xl object-cover"
                 />
               </div>
-              <div className="img-fade-bottom rounded-3xl overflow-hidden -mt-20 ml-8 w-4/5">
+              <div className="img-fade-bottom rounded-3xl overflow-hidden mt-4 lg:-mt-20 lg:ml-8 lg:w-4/5">
                 <img decoding="async" loading="lazy"
                   src="https://images.unsplash.com/photo-1601758124510-52d02ddb7cbd?w=800&q=80"
                   alt=""
@@ -246,7 +246,7 @@ function TimelineSection({ t }) {
           <span className="mb-4 inline-block font-body text-xs tracking-[0.4em] uppercase text-gold">
             {t('nosotros.timeline_label')}
           </span>
-          <h2 className="font-display uppercase text-5xl text-white sm:text-6xl" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>
+          <h2 className="font-display uppercase text-3xl sm:text-5xl text-white" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>
             {t('nosotros.timeline_title')}
           </h2>
         </AnimatedSection>
@@ -272,8 +272,8 @@ function TeamSection({ t }) {
           <span className="mb-4 inline-block font-body text-xs tracking-[0.4em] uppercase text-gold">
             {t('nosotros.team_label')}
           </span>
-          <h2 className="font-display uppercase text-5xl text-white sm:text-6xl" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>
-            {t('nosotros.team_title')}
+          <h2 className="font-display uppercase text-3xl sm:text-5xl text-white" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>
+          {t('nosotros.team_title')}
           </h2>
         </AnimatedSection>
 
@@ -323,7 +323,7 @@ function MissionSection({ t }) {
             transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
             className="text-center"
           >
-            <h2 className="font-display uppercase text-5xl leading-tight text-white sm:text-6xl lg:text-8xl" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>
+            <h2 className="font-display uppercase text-3xl sm:text-5xl leading-tight text-white lg:text-8xl" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>
               {t('nosotros.mission_before')}
               <span className="text-gradient-gold">
                 {t('nosotros.mission_highlight')}

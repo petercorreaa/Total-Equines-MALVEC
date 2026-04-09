@@ -71,14 +71,14 @@ function AuctionCard({ auction, variant = 'upcoming' }) {
         </div>
 
         {/* Info */}
-        <div className="p-8">
+        <div className="p-4 sm:p-8">
           <div className="flex flex-wrap gap-6 font-body text-sm uppercase tracking-widest text-gold">
             <span>{auction.dateDisplay}</span>
             <span className="text-gold">·</span>
             <span>{auction.format}</span>
           </div>
 
-          <h3 className="mt-2 font-display uppercase text-4xl text-white" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>{auction.name}</h3>
+          <h3 className="mt-2 font-display uppercase text-2xl sm:text-4xl text-white" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>{auction.name}</h3>
           <p className="mt-1 font-heading uppercase text-lg font-light text-gray-400" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>
             {auction.subtitle}
           </p>
@@ -119,7 +119,7 @@ function AuctionCard({ auction, variant = 'upcoming' }) {
                 {t('subastas.results_title')}
               </p>
               <div className="mt-4">
-                <p className="font-display uppercase text-3xl text-white" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>
+                <p className="font-display uppercase text-2xl sm:text-3xl text-white" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>
                   {auction.results.totalSold}
                 </p>
                 <p className="font-body text-xs text-gray-500">

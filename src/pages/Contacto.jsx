@@ -53,7 +53,7 @@ function HeroSection({ t }) {
         <motion.p variants={fadeUp} className="mb-6 font-body text-xs uppercase tracking-[0.4em] text-gold">
           {t('contacto.hero_label')}
         </motion.p>
-        <motion.h1 variants={fadeUp} className="font-display uppercase text-6xl tracking-[0.08em] text-white sm:text-8xl lg:text-9xl" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>
+        <motion.h1 variants={fadeUp} className="font-display uppercase text-4xl tracking-[0.08em] text-white sm:text-6xl lg:text-9xl" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>
           {t('contacto.hero_title')}
         </motion.h1>
         <motion.p variants={fadeUp} className="mt-4 font-heading uppercase text-xl font-light text-white/80" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>
@@ -142,7 +142,7 @@ function ContactForm({ t }) {
           <circle cx="32" cy="32" r="30" stroke="#c9a84c" strokeWidth="2" />
           <path d="M20 32l8 8 16-16" stroke="#c9a84c" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
-        <h2 className="font-display uppercase text-5xl text-gold" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>{t('contacto.success_title')}</h2>
+        <h2 className="font-display uppercase text-3xl sm:text-5xl text-gold" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>{t('contacto.success_title')}</h2>
         <p className="mt-4 font-body text-lg text-gray-300">{t('contacto.success_text')}</p>
         <Link
           to="/"
@@ -161,7 +161,7 @@ function ContactForm({ t }) {
       <p className="mb-2 font-body text-xs uppercase tracking-[0.4em] text-gold">
         {t('contacto.form_label')}
       </p>
-      <h2 className="font-display uppercase text-5xl text-white" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>{t('contacto.form_title')}</h2>
+      <h2 className="font-display uppercase text-3xl sm:text-5xl text-white" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>{t('contacto.form_title')}</h2>
       <div className="mt-4 h-px w-[60px] bg-gold" />
 
       <AnimatePresence>
@@ -333,7 +333,7 @@ function ContactInfo({ t }) {
     <div className="lg:sticky lg:top-24 lg:self-start">
       {/* Block 1 — Direct Contact */}
       <AnimatedSection direction="right">
-        <h3 className="font-display uppercase text-4xl text-white" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>{t('contacto.info_title')}</h3>
+        <h3 className="font-display uppercase text-3xl sm:text-4xl text-white" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>{t('contacto.info_title')}</h3>
         <div className="mt-4 h-px w-[60px] bg-gold" />
 
         <div className="mt-6">
@@ -386,7 +386,7 @@ function ContactInfo({ t }) {
         </div>
 
         {/* Block 2 — Social */}
-        <h4 className="mt-10 font-display uppercase text-3xl text-white" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>{t('contacto.social_title')}</h4>
+        <h4 className="mt-10 font-display uppercase text-2xl sm:text-3xl text-white" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>{t('contacto.social_title')}</h4>
         <div className="mt-4 flex gap-3">
           {[
             { Icon: FiInstagram, href: 'https://www.instagram.com/totalequines?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==', label: 'Instagram' },
@@ -431,11 +431,11 @@ function MapSection({ t }) {
           <p className="mb-4 font-body text-xs uppercase tracking-[0.4em] text-gold">
             {t('contacto.map_label')}
           </p>
-          <h2 className="font-display uppercase text-6xl text-white" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>{t('contacto.map_title')}</h2>
+          <h2 className="font-display uppercase text-4xl sm:text-6xl text-white" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>{t('contacto.map_title')}</h2>
         </AnimatedSection>
 
         <AnimatedSection className="mx-auto max-w-5xl">
-          <div className="relative h-[400px] overflow-hidden rounded-3xl border border-gold/20 bg-white/[0.04]">
+          <div className="relative h-[280px] sm:h-[400px] overflow-hidden rounded-3xl border border-gold/20 bg-white/[0.04]">
             {/* Grid lines */}
             <div
               className="absolute inset-0 bg-[length:60px_60px]"

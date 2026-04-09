@@ -57,7 +57,7 @@ export default function CertificationCarousel({ speed = 30 }) {
         <span className="mb-4 inline-block font-body text-xs tracking-[0.4em] uppercase text-gold">
           {t('inicio.cert_label')}
         </span>
-        <h2 className="font-display uppercase text-5xl text-white" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>
+        <h2 className="font-display uppercase text-3xl sm:text-5xl text-white" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>
           {t('inicio.cert_title')}
         </h2>
       </AnimatedSection>

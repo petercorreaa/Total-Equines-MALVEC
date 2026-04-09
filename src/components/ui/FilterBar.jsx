@@ -25,9 +25,9 @@ export default function FilterBar({ filters, setFilters, resultCount }) {
   const hasFilters = filters.sex || filters.age || filters.color;
 
   return (
-    <div className="sticky top-[72px] z-40 border-b border-gold/15 bg-gray-900/95 backdrop-blur-md">
-      <div className="container-custom py-4">
-        <div className="flex flex-wrap items-center gap-3">
+    <div className="sticky top-20 lg:top-24 z-40 border-b border-gold/15 bg-gray-900/95 backdrop-blur-md">
+      <div className="container-custom py-3">
+        <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
           {/* Sex pills */}
           <div className="flex flex-wrap gap-2">
             {sexOptions.map((opt) => (
@@ -79,7 +79,7 @@ export default function FilterBar({ filters, setFilters, resultCount }) {
           </select>
 
           {/* Spacer */}
-          <div className="flex-1" />
+          <div className="hidden sm:flex sm:flex-1" />
 
           {/* Result count + reset */}
           <div className="flex items-center gap-4">

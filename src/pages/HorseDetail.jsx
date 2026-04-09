@@ -47,7 +47,7 @@ function HeroSection({ horse, t }) {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.3 }}
-        className="absolute bottom-0 left-0 z-20 w-full p-8 sm:p-12 lg:p-16"
+        className="absolute bottom-0 left-0 z-20 w-full p-4 sm:p-10 lg:p-16"
       >
         <p className="font-body text-xs tracking-widest text-white/50">
           <Link to="/ventas" className="transition-colors hover:text-gold">
@@ -56,7 +56,7 @@ function HeroSection({ horse, t }) {
           {' / '}{horse.name}
         </p>
 
-        <h1 className="mt-3 font-display uppercase text-5xl tracking-[0.05em] text-white sm:text-7xl lg:text-9xl" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>
+        <h1 className="mt-3 font-display uppercase text-3xl tracking-[0.05em] text-white sm:text-5xl lg:text-9xl" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>
           {horse.name}
         </h1>
 
@@ -123,7 +123,7 @@ function DetailsSection({ horse, t }) {
               <p className="mb-6 font-body text-xs uppercase tracking-[0.4em] text-gold">
                 {t('ventas.detail_info')}
               </p>
-              <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
+              <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4">
                 {detailItems.map((item) => (
                   <div
                     key={item.label}
@@ -174,7 +174,7 @@ function DetailsSection({ horse, t }) {
           {/* Right column — sticky CTA */}
           <div className="lg:sticky lg:top-24 lg:self-start">
             <AnimatedSection direction="right">
-              <div className="rounded-3xl border border-gold/30 bg-white/[0.05] backdrop-blur-sm p-8">
+              <div className="rounded-3xl border border-gold/30 bg-white/[0.05] backdrop-blur-sm p-5 sm:p-8">
                 <h3 className="font-heading uppercase text-xl font-semibold text-white" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>
                   {horse.name}
                 </h3>
@@ -251,7 +251,7 @@ function RelatedSection({ horse, t }) {
     <section className="section-padding section-tint">
       <div className="container-custom">
         <AnimatedSection className="mb-12">
-          <h2 className="font-display uppercase text-4xl text-white" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>
+          <h2 className="font-display uppercase text-3xl sm:text-4xl text-white" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>
             {t('ventas.detail_related')}
           </h2>
         </AnimatedSection>

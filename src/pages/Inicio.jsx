@@ -120,7 +120,7 @@ function HeroSection({ t }) {
         {/* Label */}
         <motion.p
           variants={fadeUp}
-          className="mb-6 font-body text-xs tracking-[0.4em] text-gold uppercase"
+          className="mb-6 font-body text-xs tracking-[0.4em] text-gold uppercase text-center"
         >
           {t('hero.label')}
         </motion.p>
@@ -128,7 +128,7 @@ function HeroSection({ t }) {
         {/* Title */}
         <motion.h1
           variants={fadeUp}
-          className="font-display uppercase text-5xl tracking-[0.08em] text-white sm:text-7xl lg:text-9xl"
+          className="font-display uppercase text-4xl tracking-[0.08em] text-white sm:text-7xl lg:text-9xl text-center"
           style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}
         >
           {t('hero.title')}
@@ -137,7 +137,7 @@ function HeroSection({ t }) {
         {/* Subtitle */}
         <motion.p
           variants={fadeUp}
-          className="mt-4 font-heading uppercase text-xl font-light tracking-normal text-white/80 sm:text-2xl"
+          className="mt-4 font-heading uppercase text-xl font-light tracking-normal text-white/80 sm:text-2xl text-center"
           style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}
         >
           {t('hero.subtitle')}
@@ -168,14 +168,14 @@ function HeroSection({ t }) {
       </AnimatePresence>
 
       {/* Bottom left — EST */}
-      <div className="absolute bottom-10 left-8 z-10">
+      <div className="absolute bottom-10 left-8 z-10 hidden sm:block">
         <span className="font-body text-xs tracking-widest text-white/30">
           {t('hero.est')}
         </span>
       </div>
 
       {/* Bottom right — social icons */}
-      <div className="absolute bottom-10 right-8 z-10 flex items-center gap-4">
+      <div className="absolute bottom-6 right-6 z-10 flex items-center gap-4 sm:bottom-10 sm:right-8">
         <a
           href="https://www.instagram.com/totalequines?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
           target="_blank"
@@ -206,7 +206,7 @@ function IntroSection({ t }) {
         <GoldDivider className="mb-16" />
 
         <AnimatedSection className="mx-auto max-w-[900px] text-center">
-          <h2 className="font-heading uppercase text-3xl font-light leading-relaxed text-white sm:text-4xl lg:text-5xl" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>
+          <h2 className="font-heading uppercase text-2xl sm:text-4xl lg:text-5xl font-light leading-relaxed text-white" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>
             {/* Split the quote to highlight "Total Equines" */}
             {t('inicio.intro_quote').split('Total Equines').map((part, i, arr) => (
               <span key={i}>
@@ -235,7 +235,7 @@ function CriaColumn({ image, label, title, text, cta, to, direction }) {
   return (
     <AnimatedSection
       direction={direction}
-      className="group relative min-h-[500px] overflow-hidden lg:min-h-[600px]"
+      className="group relative min-h-[400px] overflow-hidden lg:min-h-[600px]"
     >
       <div className="absolute inset-0 overflow-hidden">
         <img decoding="async" loading="lazy"
@@ -246,11 +246,11 @@ function CriaColumn({ image, label, title, text, cta, to, direction }) {
       </div>
       <div className="absolute inset-0 bg-black/40 pointer-events-none" />
       <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent pointer-events-none" />
-      <div className="relative z-10 flex h-full min-h-[500px] flex-col items-center justify-center px-8 text-center lg:min-h-[600px]">
+      <div className="relative z-10 flex h-full min-h-[400px] flex-col items-center justify-center px-6 text-center lg:min-h-[600px]">
         <span className="mb-4 font-body text-xs tracking-[0.4em] uppercase text-gold">
           {label}
         </span>
-        <h3 className="font-display uppercase text-4xl tracking-[0.05em] text-white sm:text-5xl" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>
+        <h3 className="font-display uppercase text-3xl tracking-[0.05em] text-white sm:text-5xl" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>
           {title}
         </h3>
         <p className="mt-4 max-w-sm font-body text-base text-white/70">
@@ -302,7 +302,7 @@ function VentasPreviewSection({ t }) {
         <span className="mb-4 inline-block font-body text-xs tracking-[0.4em] uppercase text-gold">
           {t('inicio.ventas_label')}
         </span>
-        <h2 className="font-display uppercase text-5xl tracking-[0.05em] text-white sm:text-6xl" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>
+        <h2 className="font-display uppercase text-3xl tracking-[0.05em] text-white sm:text-5xl lg:text-6xl" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>
           {t('inicio.ventas_title')}
         </h2>
         <p className="mx-auto mt-4 max-w-2xl font-body text-lg text-gray-400">

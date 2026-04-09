@@ -104,7 +104,7 @@ function HeroSection({ t }) {
         </motion.p>
         <motion.h1
           variants={fadeUp}
-          className="font-display uppercase text-5xl tracking-[0.08em] text-white sm:text-7xl lg:text-8xl"
+          className="font-display uppercase text-4xl tracking-[0.08em] text-white sm:text-7xl lg:text-8xl"
           style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}
         >
           {t('padrillos.hero_title')}
@@ -154,7 +154,7 @@ function StallionCard({ stallion, index, t }) {
           <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent pointer-events-none" />
         </div>
 
-        <div className="p-8">
+        <div className="p-4 sm:p-8">
           <h3 className="font-display uppercase text-4xl tracking-[0.05em] text-white" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>
             {t(stallion.nameKey)}
           </h3>
@@ -174,7 +174,7 @@ function StallionCard({ stallion, index, t }) {
             {t(stallion.descKey)}
           </p>
 
-          <div className="mt-6 grid grid-cols-3 gap-4">
+          <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4">
             {stats.map((stat) => (
               <div key={stat.label}>
                 <p className="font-body text-xs uppercase tracking-widest text-gray-500">

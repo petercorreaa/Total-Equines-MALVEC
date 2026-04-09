@@ -23,12 +23,12 @@ export default function ImageCarousel({ images = [], horseName = '' }) {
       </AnimatePresence>
 
       {/* Thumbnail strip — bottom right */}
-      <div className="absolute bottom-8 right-8 z-20 flex gap-3">
+      <div className="absolute bottom-4 right-4 z-20 flex gap-2 sm:bottom-8 sm:right-8 sm:gap-3">
         {images.map((img, i) => (
           <button
             key={i}
             onClick={() => setActiveIndex(i)}
-            className={`h-16 w-24 overflow-hidden rounded-xl border-2 transition-all duration-300 sm:h-20 sm:w-28 ${
+            className={`h-12 w-16 overflow-hidden rounded-xl border-2 transition-all duration-300 sm:h-16 sm:w-24 lg:h-20 lg:w-28 ${
               i === activeIndex
                 ? 'border-gold shadow-lg shadow-gold/20'
                 : 'border-transparent opacity-70 hover:opacity-100'

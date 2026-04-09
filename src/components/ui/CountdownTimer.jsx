@@ -53,7 +53,7 @@ function CountdownTimer({ targetDate, auctionName, dateDisplay, location }) {
         <p className="mb-3 font-body text-xs uppercase tracking-[0.4em] text-gold">
           {t('subastas.countdown_label')}
         </p>
-        <h2 className="font-display uppercase text-5xl text-white" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>{auctionName}</h2>
+        <h2 className="font-display uppercase text-3xl sm:text-5xl text-white" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>{auctionName}</h2>
         <p className="mt-2 font-body text-base text-gray-400">
           {dateDisplay} · {location}
         </p>

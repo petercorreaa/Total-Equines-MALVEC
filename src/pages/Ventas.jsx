@@ -78,7 +78,7 @@ function HeroSection({ t }) {
         </motion.p>
         <motion.h1
           variants={fadeUp}
-          className="font-display uppercase text-5xl tracking-[0.08em] text-white sm:text-7xl lg:text-8xl"
+          className="font-display uppercase text-4xl tracking-[0.08em] text-white sm:text-7xl lg:text-8xl"
           style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}
         >
           {t('ventas.hero_title')}
@@ -94,7 +94,7 @@ function HeroSection({ t }) {
         {/* Stats row */}
         <motion.div
           variants={fadeUp}
-          className="mt-8 flex items-center gap-3 font-body text-sm text-white/60"
+          className="mt-8 flex flex-wrap items-center justify-center gap-2 sm:gap-3 font-body text-sm text-white/60"
         >
           <span>{t('ventas.stat_1')}</span>
           <span className="text-gold">·</span>
