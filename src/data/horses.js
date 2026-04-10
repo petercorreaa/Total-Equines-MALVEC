@@ -1,3 +1,5 @@
+import { pedigreePatches } from './pedigreePatches.js';
+
 const imgs = [
   'https://images.unsplash.com/photo-1534307671554-9a6d81f4d629?w=800&q=80',
   'https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=800&q=80',
@@ -9,10 +11,10 @@ const imgs = [
 
 const img = (a, b, c) => [imgs[a], imgs[b], imgs[c]];
 
-export const horses = [
+const _horses = [
   {
-    id: 'bravo-de-canuelas',
-    name: 'Bravo de Cañuelas',
+    id: 'total-gonna',
+    name: 'Total Gonna',
     age: 7,
     sex: 'Castrado',
     color: 'Zaino',
@@ -38,8 +40,8 @@ export const horses = [
     images: img(0, 1, 2),
   },
   {
-    id: 'la-mora-iv',
-    name: 'La Mora IV',
+    id: 'total-panamera',
+    name: 'Total Panamera',
     age: 5,
     sex: 'Yegua',
     color: 'Tordillo',
@@ -65,8 +67,8 @@ export const horses = [
     images: img(1, 2, 3),
   },
   {
-    id: 'tempestad-del-sur',
-    name: 'Tempestad del Sur',
+    id: 'total-madame',
+    name: 'Total Madame',
     age: 6,
     sex: 'Yegua',
     color: 'Alazán',
@@ -93,8 +95,8 @@ export const horses = [
     images: img(2, 3, 4),
   },
   {
-    id: 'aguante-porteno',
-    name: 'Aguante Porteño',
+    id: 'total-forever',
+    name: 'Total Forever',
     age: 8,
     sex: 'Castrado',
     color: 'Oscuro',
@@ -120,8 +122,8 @@ export const horses = [
     images: img(3, 4, 5),
   },
   {
-    id: 'luna-plateada',
-    name: 'Luna Plateada',
+    id: 'total-lola',
+    name: 'Total Lola',
     age: 4,
     sex: 'Yegua',
     color: 'Tordillo',
@@ -147,8 +149,8 @@ export const horses = [
     images: img(4, 5, 0),
   },
   {
-    id: 'pacific-dream',
-    name: 'Pacific Dream',
+    id: 'total-eclipse',
+    name: 'Total Eclipse',
     age: 5,
     sex: 'Yegua',
     color: 'Bayo',
@@ -174,8 +176,8 @@ export const horses = [
     images: img(5, 0, 1),
   },
   {
-    id: 'dorado-del-sur',
-    name: 'Dorado del Sur',
+    id: 'total-sachenca',
+    name: 'Total Sachenca',
     age: 9,
     sex: 'Castrado',
     color: 'Zaino',
@@ -201,8 +203,8 @@ export const horses = [
     images: img(0, 2, 4),
   },
   {
-    id: 'rey-pampa',
-    name: 'Rey Pampa',
+    id: 'total-chinita',
+    name: 'Total Chinita',
     age: 6,
     sex: 'Macho',
     color: 'Zaino',
@@ -229,8 +231,8 @@ export const horses = [
     images: img(1, 3, 5),
   },
   {
-    id: 'brava-portena',
-    name: 'Brava Porteña',
+    id: 'total-chunita',
+    name: 'Total Chunita',
     age: 5,
     sex: 'Yegua',
     color: 'Alazán',
@@ -256,8 +258,8 @@ export const horses = [
     images: img(2, 4, 0),
   },
   {
-    id: 'fuego-cruzado',
-    name: 'Fuego Cruzado',
+    id: 'fax-valquiria',
+    name: 'Fax Valquiria',
     age: 7,
     sex: 'Castrado',
     color: 'Oscuro',
@@ -284,8 +286,8 @@ export const horses = [
     images: img(3, 5, 1),
   },
   {
-    id: 'serena-del-campo',
-    name: 'Serena del Campo',
+    id: 'total-athenea',
+    name: 'Total Athenea',
     age: 6,
     sex: 'Yegua',
     color: 'Tordillo',
@@ -311,8 +313,8 @@ export const horses = [
     images: img(4, 0, 2),
   },
   {
-    id: 'calma-total',
-    name: 'Calma Total',
+    id: 'total-rayo',
+    name: 'Total Rayo',
     age: 8,
     sex: 'Yegua',
     color: 'Bayo',
@@ -338,8 +340,8 @@ export const horses = [
     images: img(5, 1, 3),
   },
   {
-    id: 'viento-norte',
-    name: 'Viento Norte',
+    id: 'total-malva',
+    name: 'Total Malva',
     age: 4,
     sex: 'Castrado',
     color: 'Alazán',
@@ -365,8 +367,8 @@ export const horses = [
     images: img(0, 3, 5),
   },
   {
-    id: 'estrella-federal',
-    name: 'Estrella Federal',
+    id: 'total-bomba',
+    name: 'Total Bomba',
     age: 6,
     sex: 'Yegua',
     color: 'Zaino',
@@ -392,8 +394,8 @@ export const horses = [
     images: img(1, 4, 0),
   },
   {
-    id: 'gaucho-imperial',
-    name: 'Gaucho Imperial',
+    id: 'total-cali',
+    name: 'Total Cali',
     age: 7,
     sex: 'Castrado',
     color: 'Tobiano',
@@ -419,8 +421,8 @@ export const horses = [
     images: img(2, 5, 3),
   },
   {
-    id: 'centella-azul',
-    name: 'Centella Azul',
+    id: 'total-sospecha',
+    name: 'Total Sospecha',
     age: 3,
     sex: 'Yegua',
     color: 'Tordillo',
@@ -446,8 +448,8 @@ export const horses = [
     images: img(4, 2, 1),
   },
   {
-    id: 'tormenta-pampeana',
-    name: 'Tormenta Pampeana',
+    id: 'total-payaso',
+    name: 'Total Payaso',
     age: 5,
     sex: 'Yegua',
     color: 'Oscuro',
@@ -473,8 +475,8 @@ export const horses = [
     images: img(3, 0, 4),
   },
   {
-    id: 'falcon-de-plata',
-    name: 'Falcón de Plata',
+    id: 'neike-dakota',
+    name: 'Neike Dakota',
     age: 10,
     sex: 'Castrado',
     color: 'Tordillo',
@@ -500,8 +502,8 @@ export const horses = [
     images: img(5, 3, 2),
   },
   {
-    id: 'chispa-salvaje',
-    name: 'Chispa Salvaje',
+    id: 'total-syrah',
+    name: 'Total Syrah',
     age: 4,
     sex: 'Yegua',
     color: 'Alazán',
@@ -527,8 +529,8 @@ export const horses = [
     images: img(0, 4, 3),
   },
   {
-    id: 'condor-negro',
-    name: 'Cóndor Negro',
+    id: 'total-naipe',
+    name: 'Total Naipe',
     age: 8,
     sex: 'Macho',
     color: 'Oscuro',
@@ -555,8 +557,8 @@ export const horses = [
     images: img(1, 5, 4),
   },
   {
-    id: 'mariposa-del-valle',
-    name: 'Mariposa del Valle',
+    id: 'total-regalito',
+    name: 'Total Regalito',
     age: 3,
     sex: 'Yegua',
     color: 'Bayo',
@@ -582,8 +584,8 @@ export const horses = [
     images: img(2, 0, 5),
   },
   {
-    id: 'trueno-del-plata',
-    name: 'Trueno del Plata',
+    id: 'total-vertichenca',
+    name: 'Total Vertichenca',
     age: 6,
     sex: 'Castrado',
     color: 'Zaino',
@@ -610,8 +612,8 @@ export const horses = [
     images: img(3, 1, 0),
   },
   {
-    id: 'aurora-boreal',
-    name: 'Aurora Boreal',
+    id: 'total-samibec',
+    name: 'Total Samibec',
     age: 4,
     sex: 'Yegua',
     color: 'Tordillo',
@@ -637,8 +639,8 @@ export const horses = [
     images: img(4, 2, 5),
   },
   {
-    id: 'gladiador-pampeano',
-    name: 'Gladiador Pampeano',
+    id: 'total-rose',
+    name: 'Total Rose',
     age: 9,
     sex: 'Castrado',
     color: 'Zaino',
@@ -664,8 +666,8 @@ export const horses = [
     images: img(5, 4, 1),
   },
   {
-    id: 'princesa-gaucha',
-    name: 'Princesa Gaucha',
+    id: 'total-montblanc',
+    name: 'Total Montblanc',
     age: 5,
     sex: 'Yegua',
     color: 'Zaino',
@@ -691,8 +693,8 @@ export const horses = [
     images: img(0, 5, 2),
   },
   {
-    id: 'relampago-azul',
-    name: 'Relámpago Azul',
+    id: 'total-silvina',
+    name: 'Total Silvina',
     age: 3,
     sex: 'Macho',
     color: 'Tordillo',
@@ -718,8 +720,8 @@ export const horses = [
     images: img(1, 0, 4),
   },
   {
-    id: 'noche-estrellada',
-    name: 'Noche Estrellada',
+    id: 'sm-the-artic-winner',
+    name: 'SM The Artic Winner',
     age: 7,
     sex: 'Yegua',
     color: 'Oscuro',
@@ -745,8 +747,8 @@ export const horses = [
     images: img(2, 1, 5),
   },
   {
-    id: 'victoria-real',
-    name: 'Victoria Real',
+    id: 'total-taquito',
+    name: 'Total Taquito',
     age: 6,
     sex: 'Yegua',
     color: 'Alazán',
@@ -773,8 +775,8 @@ export const horses = [
     images: img(3, 2, 0),
   },
   {
-    id: 'titan-del-sur',
-    name: 'Titán del Sur',
+    id: 'total-croto',
+    name: 'Total Croto',
     age: 10,
     sex: 'Castrado',
     color: 'Zaino',
@@ -800,8 +802,8 @@ export const horses = [
     images: img(4, 3, 1),
   },
   {
-    id: 'flor-de-campo',
-    name: 'Flor de Campo',
+    id: 'total-maravilla',
+    name: 'Total Maravilla',
     age: 4,
     sex: 'Yegua',
     color: 'Bayo',
@@ -827,8 +829,8 @@ export const horses = [
     images: img(5, 0, 3),
   },
   {
-    id: 'rapido-pampeano',
-    name: 'Rápido Pampeano',
+    id: 'total-ilusion',
+    name: 'Total Ilusion',
     age: 5,
     sex: 'Castrado',
     color: 'Alazán',
@@ -854,8 +856,8 @@ export const horses = [
     images: img(0, 1, 5),
   },
   {
-    id: 'patron-del-norte',
-    name: 'Patrón del Norte',
+    id: 'total-halovy',
+    name: 'Total Halovy',
     age: 8,
     sex: 'Macho',
     color: 'Oscuro',
@@ -882,8 +884,8 @@ export const horses = [
     images: img(1, 2, 4),
   },
   {
-    id: 'brisa-marina',
-    name: 'Brisa Marina',
+    id: 'total-xenona',
+    name: 'Total Xenona',
     age: 6,
     sex: 'Yegua',
     color: 'Tordillo',
@@ -909,8 +911,8 @@ export const horses = [
     images: img(2, 3, 1),
   },
   {
-    id: 'cometa-dorado',
-    name: 'Cometa Dorado',
+    id: 'total-messina',
+    name: 'Total Messina',
     age: 3,
     sex: 'Castrado',
     color: 'Bayo',
@@ -936,8 +938,8 @@ export const horses = [
     images: img(3, 4, 2),
   },
   {
-    id: 'ronaldo-criollo',
-    name: 'Ronaldo Criollo',
+    id: 'total-jampine',
+    name: 'Total Jampine',
     age: 7,
     sex: 'Castrado',
     color: 'Picazo',
@@ -963,8 +965,8 @@ export const horses = [
     images: img(4, 5, 0),
   },
   {
-    id: 'diamante-negro',
-    name: 'Diamante Negro',
+    id: 'total-nica',
+    name: 'Total Nica',
     age: 5,
     sex: 'Macho',
     color: 'Oscuro',
@@ -991,8 +993,8 @@ export const horses = [
     images: img(5, 1, 3),
   },
   {
-    id: 'pampero-salvaje',
-    name: 'Pampero Salvaje',
+    id: 'total-shiva',
+    name: 'Total Shiva',
     age: 6,
     sex: 'Castrado',
     color: 'Alazán',
@@ -1018,8 +1020,8 @@ export const horses = [
     images: img(0, 2, 3),
   },
   {
-    id: 'luna-de-miel',
-    name: 'Luna de Miel',
+    id: 'total-emboscada',
+    name: 'Total Emboscada',
     age: 4,
     sex: 'Yegua',
     color: 'Bayo',
@@ -1045,8 +1047,8 @@ export const horses = [
     images: img(1, 3, 4),
   },
   {
-    id: 'capitan-gaucho',
-    name: 'Capitán Gaucho',
+    id: 'total-cachito',
+    name: 'Total Cachito',
     age: 11,
     sex: 'Castrado',
     color: 'Zaino',
@@ -1073,8 +1075,8 @@ export const horses = [
     images: img(2, 4, 5),
   },
   {
-    id: 'sol-naciente',
-    name: 'Sol Naciente',
+    id: 'total-diesel',
+    name: 'Total Diesel',
     age: 3,
     sex: 'Yegua',
     color: 'Alazán',
@@ -1100,5 +1102,12 @@ export const horses = [
     images: img(3, 5, 0),
   },
 ];
+
+export const horses = _horses.map((horse) => {
+  const patch = pedigreePatches.find(
+    (p) => p.name.toLowerCase() === horse.name.toLowerCase()
+  );
+  return patch ? { ...horse, pedigree: patch.pedigree } : horse;
+});
 
 export const getHorseById = (id) => horses.find((h) => h.id === id);

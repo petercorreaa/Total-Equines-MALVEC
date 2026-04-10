@@ -10,49 +10,11 @@ import CertificationCarousel from '@/components/ui/CertificationCarousel';
 import SEOMeta from '@/components/layout/SEOMeta';
 import HeroVideo from '@/components/ui/HeroVideo';
 
+import { horses } from '@/data/horses';
+
 /* ─── Data ─── */
 
-const previewHorses = [
-  {
-    id: 'bravo-de-canuelas',
-    name: 'Bravo de Cañuelas',
-    age: 7,
-    sex: 'Castrado',
-    color: 'Zaino',
-    heightHH: 15.1,
-    images: [
-      'https://images.unsplash.com/photo-1534307671554-9a6d81f4d629?w=600&q=80',
-      'https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=600&q=80',
-      'https://images.unsplash.com/photo-1601758124510-52d02ddb7cbd?w=600&q=80'
-    ]
-  },
-  {
-    id: 'la-mora-iv',
-    name: 'La Mora IV',
-    age: 5,
-    sex: 'Yegua',
-    color: 'Tordillo',
-    heightHH: 14.3,
-    images: [
-      'https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=600&q=80',
-      'https://images.unsplash.com/photo-1601758124510-52d02ddb7cbd?w=600&q=80',
-      'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80'
-    ]
-  },
-  {
-    id: 'tempestad-del-sur',
-    name: 'Tempestad del Sur',
-    age: 6,
-    sex: 'Yegua',
-    color: 'Alazán',
-    heightHH: 15.0,
-    images: [
-      'https://images.unsplash.com/photo-1601758124510-52d02ddb7cbd?w=600&q=80',
-      'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80',
-      'https://images.unsplash.com/photo-1534307671554-9a6d81f4d629?w=600&q=80'
-    ]
-  }
-];
+const previewHorses = horses.slice(0, 3);
 
 /* ─── Section Components ─── */
 
