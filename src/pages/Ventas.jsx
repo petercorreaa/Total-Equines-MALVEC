@@ -78,15 +78,15 @@ function HeroSection({ t }) {
         </motion.p>
         <motion.h1
           variants={fadeUp}
-          className="font-display uppercase text-4xl tracking-[0.08em] text-white sm:text-7xl lg:text-8xl"
-          style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}
+          className="font-display uppercase text-5xl tracking-[0.08em] text-white sm:text-7xl lg:text-8xl"
+          style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}
         >
           {t('ventas.hero_title')}
         </motion.h1>
         <motion.p
           variants={fadeUp}
           className="mt-4 font-heading uppercase text-xl font-light text-white/80"
-          style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}
+          style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}
         >
           {t('ventas.hero_subtitle')}
         </motion.p>

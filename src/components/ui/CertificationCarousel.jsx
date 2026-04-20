@@ -17,14 +17,14 @@ function ShieldPlaceholder() {
 
 function CertItem({ cert }) {
   return (
-    <div className="mx-12 flex flex-shrink-0 items-center gap-4">
-      {/* Logo or placeholder */}
-      <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl border border-gold/20 bg-white/[0.08]">
+    <div className="flex items-center gap-4 mx-12 flex-shrink-0">
+      {/* Logo or placeholder shield */}
+      <div className="w-12 h-12 rounded-xl bg-white/[0.08] border border-gold/20 flex items-center justify-center flex-shrink-0">
         {cert.logo ? (
           <img
             src={cert.logo}
-            alt={cert.title}
-            className="h-12 w-12 rounded-xl object-contain"
+            alt={cert.abbreviation}
+            className="w-10 h-10 object-contain"
             loading="lazy"
           />
         ) : (
@@ -33,15 +33,21 @@ function CertItem({ cert }) {
       </div>
       {/* Text */}
       <div className="flex flex-col">
-        <span className="whitespace-nowrap font-heading uppercase text-sm font-semibold text-white" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>
+        <span
+          className="font-display text-gold text-base uppercase tracking-widest"
+          style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}
+        >
+          {cert.abbreviation}
+        </span>
+        <span
+          className="font-body text-white/70 text-xs whitespace-nowrap"
+          style={{ fontFamily: 'Montserrat, sans-serif' }}
+        >
           {cert.title}
         </span>
-        <span className="whitespace-nowrap font-body text-xs text-gray-500">
-          {cert.issuer} · {cert.year}
-        </span>
       </div>
-      {/* Separator dot */}
-      <div className="ml-12 h-1 w-1 flex-shrink-0 rounded-full bg-gold/30" />
+      {/* Separator */}
+      <div className="w-1 h-1 rounded-full bg-gold/30 ml-12 flex-shrink-0" />
     </div>
   );
 }
@@ -57,7 +63,7 @@ export default function CertificationCarousel({ speed = 30 }) {
         <span className="mb-4 inline-block font-body text-xs tracking-[0.4em] uppercase text-gold">
           {t('inicio.cert_label')}
         </span>
-        <h2 className="font-display uppercase text-3xl sm:text-5xl text-white" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>
+        <h2 className="font-display uppercase text-5xl text-white" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>
           {t('inicio.cert_title')}
         </h2>
       </AnimatedSection>

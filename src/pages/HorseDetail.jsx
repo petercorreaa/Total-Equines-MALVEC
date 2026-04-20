@@ -56,7 +56,7 @@ function HeroSection({ horse, t }) {
           {' / '}{horse.name}
         </p>
 
-        <h1 className="mt-3 font-display uppercase text-3xl tracking-[0.05em] text-white sm:text-5xl lg:text-9xl" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>
+        <h1 className="mt-3 font-display uppercase text-5xl tracking-[0.05em] text-white sm:text-7xl lg:text-9xl" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>
           {horse.name}
         </h1>
 
@@ -174,8 +174,8 @@ function DetailsSection({ horse, t }) {
           {/* Right column — sticky CTA */}
           <div className="lg:sticky lg:top-24 lg:self-start">
             <AnimatedSection direction="right">
-              <div className="rounded-3xl border border-gold/30 bg-white/[0.05] backdrop-blur-sm p-5 sm:p-8">
-                <h3 className="font-heading uppercase text-xl font-semibold text-white" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>
+              <div className="rounded-3xl border border-gold/30 bg-white/[0.05] backdrop-blur-sm p-8">
+                <h3 className="font-heading uppercase text-xl font-semibold text-white" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>
                   {horse.name}
                 </h3>
 
@@ -251,7 +251,7 @@ function RelatedSection({ horse, t }) {
     <section className="section-padding section-tint">
       <div className="container-custom">
         <AnimatedSection className="mb-12">
-          <h2 className="font-display uppercase text-3xl sm:text-4xl text-white" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>
+          <h2 className="font-display uppercase text-4xl text-white" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>
             {t('ventas.detail_related')}
           </h2>
         </AnimatedSection>
@@ -272,8 +272,8 @@ function NotFound({ t }) {
   return (
     <main className="flex min-h-screen items-center justify-center bg-transparent">
       <div className="text-center">
-        <h1 className="font-display uppercase text-6xl text-gold" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>404</h1>
-        <p className="mt-4 font-heading uppercase text-2xl font-semibold text-white" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>
+        <h1 className="font-display uppercase text-6xl text-gold" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>404</h1>
+        <p className="mt-4 font-heading uppercase text-2xl font-semibold text-white" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>
           {t('ventas.detail_not_found')}
         </p>
         <p className="mt-2 font-body text-gray-400">

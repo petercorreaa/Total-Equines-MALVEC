@@ -30,7 +30,7 @@ function HorseCard({ horse, delay = 0 }) {
 
           {/* Info */}
           <div className="p-6">
-            <h3 className="font-heading uppercase text-xl font-semibold text-white" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>
+            <h3 className="font-heading uppercase text-xl font-semibold text-white" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>
               {horse.name}
             </h3>
             <div className="my-3 h-0.5 w-8 rounded-full bg-gold" />

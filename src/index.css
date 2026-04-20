@@ -13,6 +13,20 @@
   font-weight: 700;
   font-style: normal;
   font-display: swap;
+  unicode-range: U+0000-00FF, U+0100-017F, U+0180-024F;
+}
+
+/* Extended Latin coverage — accented chars used in Spanish */
+@font-face {
+  font-family: 'Couture';
+  src: url('/assets/fonts/couture-bld.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  unicode-range:
+    U+00C0-00D6,
+    U+00D8-00F6,
+    U+00F8-00FF;
 }
 
 @tailwind base;
@@ -30,7 +44,38 @@ h1, h2, h3, h4, h5, h6,
 [class*="font-display"],
 [class*="font-heading"] {
   font-family: 'Couture', sans-serif !important;
+  font-weight: 700 !important;
   text-transform: uppercase !important;
+  font-synthesis: none !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  text-rendering: geometricPrecision !important;
+  font-variant-ligatures: none !important;
+  -webkit-text-stroke: 0.01em currentColor;
+}
+
+/* Large hero titles */
+h1.font-display,
+.text-9xl.font-display,
+.text-8xl.font-display,
+.text-7xl.font-display {
+  -webkit-text-stroke: 0.02em currentColor;
+}
+
+/* Medium section titles */
+h2.font-display,
+h3.font-display,
+.text-6xl.font-display,
+.text-5xl.font-display,
+.text-4xl.font-display {
+  -webkit-text-stroke: 0.015em currentColor;
+}
+
+/* Smaller headings */
+h4.font-display,
+.text-3xl.font-display,
+.text-2xl.font-display {
+  -webkit-text-stroke: 0.01em currentColor;
 }
 
 :root {

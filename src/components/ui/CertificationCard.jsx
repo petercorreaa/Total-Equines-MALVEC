@@ -33,7 +33,7 @@ function CertificationCard({ title, issuer, year, icon }) {
       <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-white/[0.05]">
         {icon || <ShieldIcon />}
       </div>
-      <h4 className="text-center font-heading uppercase text-lg font-semibold text-white" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>
+      <h4 className="text-center font-heading uppercase text-lg font-semibold text-white" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>
         {title}
       </h4>
       <p className="mt-2 text-center font-body text-sm text-gray-400">

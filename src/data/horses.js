@@ -146,7 +146,7 @@ const _horses = [
       damSire: { name: 'Silver Moon', origin: 'NZ' },
       damDam: { name: 'Estrella Austral', origin: 'ARG' },
     },
-    images: img(4, 5, 0),
+    images: ['/assets/horses/lola.jpg', imgs[4], imgs[5]],
   },
   {
     id: 'total-eclipse',
@@ -173,7 +173,7 @@ const _horses = [
       damSire: { name: 'Dorado del Sur', origin: 'ARG' },
       damDam: { name: 'Kiwi Star', origin: 'NZ' },
     },
-    images: img(5, 0, 1),
+    images: ['/assets/horses/eclipse.jpg', imgs[5], imgs[0]],
   },
   {
     id: 'total-sachenca',
@@ -200,7 +200,7 @@ const _horses = [
       damSire: { name: 'Dorado Viejo', origin: 'ARG' },
       damDam: { name: 'Reina Dorada', origin: 'ARG' },
     },
-    images: img(0, 2, 4),
+    images: ['/assets/horses/sachenca.jpg', imgs[0], imgs[2]],
   },
   {
     id: 'total-chinita',
@@ -364,7 +364,7 @@ const _horses = [
       damSire: { name: 'Open Libertad', origin: 'ARG' },
       damDam: { name: 'Tormenta', origin: 'ARG' },
     },
-    images: img(0, 3, 5),
+    images: ['/assets/horses/malva.jpg', imgs[0], imgs[3]],
   },
   {
     id: 'total-bomba',
@@ -391,7 +391,7 @@ const _horses = [
       damSire: { name: 'Federal Gaucho', origin: 'ARG' },
       damDam: { name: 'Estrella Polar', origin: 'ARG' },
     },
-    images: img(1, 4, 0),
+    images: ['/assets/horses/bomba.jpg', imgs[1], imgs[4]],
   },
   {
     id: 'total-cali',
@@ -418,7 +418,7 @@ const _horses = [
       damSire: { name: 'Tobiano Real', origin: 'ARG' },
       damDam: { name: 'Mancha del Sur', origin: 'ARG' },
     },
-    images: img(2, 5, 3),
+    images: ['/assets/horses/cali.jpg', imgs[2], imgs[5]],
   },
   {
     id: 'total-sospecha',
@@ -609,7 +609,7 @@ const _horses = [
       damSire: { name: 'Río Bravo', origin: 'ARG' },
       damDam: { name: 'Platense', origin: 'ARG' },
     },
-    images: img(3, 1, 0),
+    images: ['/assets/horses/vertichenca.jpg', imgs[3], imgs[1]],
   },
   {
     id: 'total-samibec',
@@ -636,7 +636,7 @@ const _horses = [
       damSire: { name: 'Fuego Pampeano', origin: 'ARG' },
       damDam: { name: 'Luz del Alba', origin: 'ARG' },
     },
-    images: img(4, 2, 5),
+    images: ['/assets/horses/samibec.jpg', imgs[4], imgs[2]],
   },
   {
     id: 'total-rose',
@@ -826,7 +826,7 @@ const _horses = [
       damSire: { name: 'Equilibrio', origin: 'ARG' },
       damDam: { name: 'Rosa del Prado', origin: 'ARG' },
     },
-    images: img(5, 0, 3),
+    images: ['/assets/horses/maravilla.jpg', imgs[5], imgs[0]],
   },
   {
     id: 'total-ilusion',
@@ -853,7 +853,7 @@ const _horses = [
       damSire: { name: 'Open Libertad', origin: 'ARG' },
       damDam: { name: 'Centella', origin: 'ARG' },
     },
-    images: img(0, 1, 5),
+    images: ['/assets/horses/ilusion.jpg', imgs[0], imgs[1]],
   },
   {
     id: 'total-halovy',

@@ -12,7 +12,7 @@ function PedigreeNode({ label, name, origin, variant = 'default' }) {
       <p className="font-body text-xs uppercase tracking-widest text-gray-500">
         {label}
       </p>
-      <p className="mt-1 font-heading uppercase text-sm font-semibold text-white" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>
+      <p className="mt-1 font-heading uppercase text-sm font-semibold text-white" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>
         {name}
       </p>
       {origin && (

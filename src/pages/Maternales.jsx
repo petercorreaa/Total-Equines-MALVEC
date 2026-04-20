@@ -108,15 +108,15 @@ function HeroSection({ t }) {
         </motion.p>
         <motion.h1
           variants={fadeUp}
-          className="font-display uppercase text-4xl tracking-[0.08em] text-white sm:text-7xl lg:text-8xl"
-          style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}
+          className="font-display uppercase text-5xl tracking-[0.08em] text-white sm:text-7xl lg:text-8xl"
+          style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}
         >
           {t('maternales.hero_title')}
         </motion.h1>
         <motion.p
           variants={fadeUp}
           className="mt-4 font-heading uppercase text-xl font-light text-white/80"
-          style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}
+          style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}
         >
           {t('maternales.hero_subtitle')}
         </motion.p>
@@ -154,8 +154,8 @@ function MaternalLineCard({ line, index, t }) {
           <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent pointer-events-none" />
         </div>
         <div className="p-6">
-          <div className="flex flex-wrap items-start justify-between gap-2">
-            <h3 className="font-heading uppercase text-xl font-semibold text-white" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>
+          <div className="flex items-center justify-between gap-3">
+            <h3 className="font-heading uppercase text-xl font-semibold text-white" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>
               {t(line.nameKey)}
             </h3>
             <span className="flex-shrink-0 rounded-full border border-gold/30 bg-gold/10 px-3 py-1 font-body text-xs text-gold">

@@ -86,15 +86,15 @@ function HeroSection({ t }) {
         </motion.p>
         <motion.h1
           variants={fadeUp}
-          className="font-display uppercase text-4xl tracking-[0.08em] text-white sm:text-7xl lg:text-9xl"
-          style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}
+          className="font-display uppercase text-5xl tracking-[0.08em] text-white sm:text-7xl lg:text-9xl"
+          style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}
         >
           {t('lacria.hero_title')}
         </motion.h1>
         <motion.p
           variants={fadeUp}
           className="mt-4 font-heading uppercase text-xl font-light text-white/80"
-          style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}
+          style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}
         >
           {t('lacria.hero_subtitle')}
         </motion.p>
@@ -159,7 +159,7 @@ function PathCard({ image, label, title, text, cta, to, direction, t }) {
           <span className="mb-3 font-body text-xs tracking-[0.4em] uppercase text-gold">
             {label}
           </span>
-          <h3 className="font-display uppercase text-3xl sm:text-5xl text-white" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>
+          <h3 className="font-display uppercase text-4xl text-white sm:text-5xl" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>
             {title}
           </h3>
           <p className="mt-3 font-body text-base text-white/70">
@@ -212,11 +212,11 @@ function PhilosophySection({ t }) {
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
           {philosophyPillars.map((pillar, i) => (
             <AnimatedSection key={pillar.num} delay={i * 0.1}>
-              <div className="rounded-2xl border border-gold/15 bg-white/[0.04] backdrop-blur-sm p-5 sm:p-8">
-                <span className="font-display uppercase text-5xl text-gold/30" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>
+              <div className="rounded-2xl border border-gold/15 bg-white/[0.04] backdrop-blur-sm p-8">
+                <span className="font-display uppercase text-5xl text-gold/30" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>
                   {pillar.num}
                 </span>
-                <h3 className="mt-3 font-heading uppercase text-xl font-semibold text-white" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>
+                <h3 className="mt-3 font-heading uppercase text-xl font-semibold text-white" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>
                   {t(pillar.titleKey)}
                 </h3>
                 <p className="mt-3 font-body text-base leading-relaxed text-gray-400">
