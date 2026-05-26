@@ -168,7 +168,7 @@ function IntroSection({ t }) {
         <GoldDivider className="mb-16" />
 
         <AnimatedSection className="mx-auto max-w-[900px] text-center">
-          <h2 className="font-heading uppercase text-2xl sm:text-4xl lg:text-5xl font-light leading-relaxed text-white" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>
+          <h2 className="font-heading uppercase text-2xl sm:text-4xl lg:text-5xl font-light leading-relaxed text-white" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase', WebkitTextStroke: '0' }}>
             {/* Split the quote to highlight "Total Equines" */}
             {t('inicio.intro_quote').split('Total Equines').map((part, i, arr) => (
               <span key={i}>
