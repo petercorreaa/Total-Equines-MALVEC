@@ -71,7 +71,7 @@ function HeroSection({ t }) {
       <div className="absolute inset-0">
         <img decoding="async" loading="eager" fetchpriority="high"
           src="https://images.unsplash.com/photo-1601758124510-52d02ddb7cbd?w=1920&q=80"
-          alt=""
+          alt="Padrillo de polo de la cabaña Total Equines, Argentina"
           className="h-full w-full object-cover"
         />
       </div>

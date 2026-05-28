@@ -1,5 +1,5 @@
 import { lazy, Suspense } from 'react';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence, LazyMotion, domAnimation } from 'framer-motion';
 import { LanguageProvider } from '@/context/LanguageContext';
 import ScrollToTop from '@/components/layout/ScrollToTop';
@@ -47,8 +47,7 @@ function AnimatedRoutes() {
 
 function App() {
   return (
-    <BrowserRouter>
-      <LanguageProvider>
+    <LanguageProvider>
         <LazyMotion features={domAnimation}>
           <LoadingScreen />
           <ScrollToTop />
@@ -60,7 +59,6 @@ function App() {
           <BackToTop />
         </LazyMotion>
       </LanguageProvider>
-    </BrowserRouter>
   );
 }
 

@@ -217,7 +217,7 @@ function DetailsSection({ horse, t }) {
                       {t('ventas.detail_copy_link')}
                     </button>
                     <a
-                      href={`https://wa.me/?text=${waText}%20${encodeURIComponent(window.location.href)}`}
+                      href={`https://wa.me/?text=${waText}%20${encodeURIComponent(typeof window !== 'undefined' ? window.location.href : '')}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="rounded-xl border border-gray-600 px-4 py-2 font-body text-xs text-gray-400 transition-colors hover:border-gold/50 hover:text-gold"
@@ -299,12 +299,35 @@ export default function HorseDetail() {
 
   if (!horse) return <NotFound t={t} />;
 
+  const horseSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: horse.name,
+    description: horse.description,
+    image: horse.images[0],
+    brand: { '@type': 'Brand', name: 'Total Equines' },
+    countryOfOrigin: horse.origin,
+    additionalProperty: [
+      { '@type': 'PropertyValue', name: 'Edad', value: `${horse.age} años` },
+      { '@type': 'PropertyValue', name: 'Sexo', value: horse.sex },
+      { '@type': 'PropertyValue', name: 'Color', value: horse.color },
+      { '@type': 'PropertyValue', name: 'Alzada', value: `${horse.heightHH} HH` },
+      { '@type': 'PropertyValue', name: 'Handicap de polo', value: String(horse.poloHandicap) },
+      { '@type': 'PropertyValue', name: 'Criador', value: horse.breeder },
+      { '@type': 'PropertyValue', name: 'Entrenador', value: horse.trainedBy },
+      { '@type': 'PropertyValue', name: 'Padre (Sire)', value: `${horse.pedigree.sire.name} (${horse.pedigree.sire.origin})` },
+      { '@type': 'PropertyValue', name: 'Madre (Dam)', value: `${horse.pedigree.dam.name} (${horse.pedigree.dam.origin})` },
+    ],
+    award: horse.achievements,
+  };
+
   return (
     <main>
       <SEOMeta
         title={horse.name}
         description={horse.description.split('.')[0] + '.'}
         image={horse.images[0]}
+        jsonLd={horseSchema}
       />
       <HeroSection horse={horse} t={t} />
       <DetailsSection horse={horse} t={t} />

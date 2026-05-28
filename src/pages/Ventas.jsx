@@ -45,7 +45,7 @@ function HeroSection({ t }) {
       <div className="absolute inset-0">
         <img loading="eager" decoding="async" fetchpriority="high"
           src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=80"
-          alt=""
+          alt="Caballos de polo en venta en Total Equines, cabaña argentina de alto rendimiento"
           className="h-full w-full object-cover"
         />
       </div>
