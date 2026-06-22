@@ -10,11 +10,12 @@ import CertificationCarousel from '@/components/ui/CertificationCarousel';
 import SEOMeta from '@/components/layout/SEOMeta';
 import HeroVideo from '@/components/ui/HeroVideo';
 
-import { horses } from '@/data/horses';
+import { horses, hasRealImage } from '@/data/horses';
 
 /* ─── Data ─── */
 
-const previewHorses = horses.slice(0, 3);
+// Only feature horses with a real photo, matching the Ventas catalog order.
+const previewHorses = horses.filter(hasRealImage).slice(0, 3);
 
 /* ─── Section Components ─── */
 

@@ -120,21 +120,7 @@ function DropdownItem({ to, label, pathname }) {
 }
 
 function LanguageSelector() {
-  const { language } = useLanguage();
-  const { t } = useTranslation();
-  const [tooltip, setTooltip] = useState(null);
-  const timeoutRef = useRef(null);
-
-  const handleClick = (lang) => {
-    if (lang === 'es') return;
-    clearTimeout(timeoutRef.current);
-    setTooltip(lang);
-    timeoutRef.current = setTimeout(() => setTooltip(null), 2000);
-  };
-
-  useEffect(() => {
-    return () => clearTimeout(timeoutRef.current);
-  }, []);
+  const { language, setLanguage } = useLanguage();
 
   const langs = ['ES', 'EN', 'ZH'];
 
@@ -143,7 +129,7 @@ function LanguageSelector() {
       {langs.map((lang, i) => (
         <span key={lang} className="flex items-center gap-1">
           <button
-            onClick={() => handleClick(lang.toLowerCase())}
+            onClick={() => setLanguage(lang.toLowerCase())}
             className={`px-1 py-0.5 transition-colors duration-300 ${
               language === lang.toLowerCase()
                 ? 'text-gold'
@@ -157,19 +143,6 @@ function LanguageSelector() {
           )}
         </span>
       ))}
-      <AnimatePresence>
-        {tooltip && (
-          <motion.div
-            initial={{ opacity: 0, y: 4 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 4 }}
-            transition={{ duration: 0.2 }}
-            className="absolute top-full right-0 mt-2 whitespace-nowrap rounded-xl border border-gold/20 bg-black/95 px-4 py-2 text-xs text-gold shadow-xl backdrop-blur-md"
-          >
-            {t('global.proximamente')}
-          </motion.div>
-        )}
-      </AnimatePresence>
     </div>
   );
 }

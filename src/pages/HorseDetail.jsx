@@ -2,7 +2,9 @@ import { useState, useMemo } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useTranslation } from '@/hooks/useTranslation';
+import { useLanguage } from '@/context/LanguageContext';
 import { horses, getHorseById } from '@/data/horses';
+import { localizeHorse } from '@/data/horseTranslations';
 import AnimatedSection from '@/components/ui/AnimatedSection';
 import GoldDivider from '@/components/ui/GoldDivider';
 import ImageCarousel from '@/components/ui/ImageCarousel';
@@ -63,9 +65,9 @@ function HeroSection({ horse, t }) {
         {/* Stat pills */}
         <div className="mt-4 flex flex-wrap gap-3">
           {[
-            `${horse.age} años`,
-            horse.sex,
-            horse.color,
+            `${horse.age} ${t('attr.years')}`,
+            t(`attr.sex.${horse.sex}`),
+            t(`attr.color.${horse.color}`),
             `${horse.heightHH} HH`,
             `HCP ${horse.poloHandicap}`,
             ...(horse.registration ? [`REG. ${horse.registration}`] : []),
@@ -88,13 +90,13 @@ function HeroSection({ horse, t }) {
 
 function DetailsSection({ horse, t }) {
   const detailItems = [
-    { label: t('ventas.detail_origin'), value: horse.origin },
+    { label: t('ventas.detail_origin'), value: t(`attr.origin.${horse.origin}`) },
     { label: t('ventas.detail_breeder'), value: horse.breeder },
     { label: t('ventas.detail_trainer'), value: horse.trainedBy },
-    { label: t('ventas.detail_sex'), value: horse.sex },
-    { label: t('ventas.detail_color'), value: horse.color },
+    { label: t('ventas.detail_sex'), value: t(`attr.sex.${horse.sex}`) },
+    { label: t('ventas.detail_color'), value: t(`attr.color.${horse.color}`) },
     { label: t('ventas.detail_height'), value: `${horse.heightHH} HH` },
-    { label: 'N° de Registro', value: horse.registration || 'No disponible' },
+    { label: t('attr.registration_label'), value: horse.registration || t('attr.not_available') },
   ];
 
   const waText = encodeURIComponent(`${t('ventas.detail_wa_message')} ${horse.name}`);
@@ -297,7 +299,8 @@ function NotFound({ t }) {
 export default function HorseDetail() {
   const { id } = useParams();
   const { t } = useTranslation();
-  const horse = getHorseById(id);
+  const { language } = useLanguage();
+  const horse = localizeHorse(getHorseById(id), language);
 
   if (!horse) return <NotFound t={t} />;
 

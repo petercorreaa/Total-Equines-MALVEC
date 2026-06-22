@@ -1206,3 +1206,8 @@ export const horses = _horses.map((horse) => {
 });
 
 export const getHorseById = (id) => horses.find((h) => h.id === id);
+
+// A horse "has a real image" when its first image is a routed local file rather
+// than the inline gray placeholder SVG (data: URI).
+export const hasRealImage = (horse) =>
+  Boolean(horse?.images?.[0]) && !horse.images[0].startsWith('data:');

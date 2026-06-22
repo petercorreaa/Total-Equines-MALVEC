@@ -351,5 +351,30 @@
     "newsletter_cta": "SUSCRIBIRME",
     "newsletter_thanks": "¡Gracias! Te avisaremos antes del próximo evento.",
     "newsletter_privacy": "Sin spam. Podés darte de baja cuando quieras."
+  },
+  "attr": {
+    "sex": {
+      "Yegua": "Yegua",
+      "Castrado": "Castrado",
+      "Macho": "Macho"
+    },
+    "color": {
+      "Zaino": "Zaino",
+      "Tordillo": "Tordillo",
+      "Alazán": "Alazán",
+      "Oscuro": "Oscuro",
+      "Bayo": "Bayo",
+      "Picazo": "Picazo",
+      "Tobiano": "Tobiano"
+    },
+    "origin": {
+      "Argentina": "Argentina"
+    },
+    "years": "años",
+    "age_label": "Edad",
+    "color_label": "Color",
+    "height_label": "Alzada",
+    "registration_label": "N° de Registro",
+    "not_available": "No disponible"
   }
 }

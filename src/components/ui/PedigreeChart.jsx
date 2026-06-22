@@ -9,6 +9,7 @@ const coutureStyle = {
 };
 
 function PedigreeNode({ label, name, variant = 'default', compact = false }) {
+  const { t } = useTranslation();
   const styles = {
     horse: 'border-gold/50 bg-gold/10',
     parent: 'border-gold/25 bg-white/[0.05]',
@@ -41,7 +42,7 @@ function PedigreeNode({ label, name, variant = 'default', compact = false }) {
         <span
           className={`${label ? 'mt-1 block' : ''} font-body text-xs italic text-gray-600`}
         >
-          No disponible
+          {t('attr.not_available')}
         </span>
       )}
     </div>

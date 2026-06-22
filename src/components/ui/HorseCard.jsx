@@ -22,7 +22,7 @@ function HorseCard({ horse, delay = 0 }) {
               className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.08]"
             />
             <span className="absolute right-4 top-4 rounded-full border border-white/20 bg-black/70 px-3 py-1 font-body text-xs text-white backdrop-blur">
-              {horse.sex}
+              {t(`attr.sex.${horse.sex}`)}
             </span>
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent pointer-events-none" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
@@ -37,15 +37,15 @@ function HorseCard({ horse, delay = 0 }) {
 
             <div className="flex gap-4">
               <div>
-                <p className="font-body text-xs uppercase tracking-widest text-gray-500">Edad</p>
-                <p className="font-body text-sm text-gray-400">{horse.age} años</p>
+                <p className="font-body text-xs uppercase tracking-widest text-gray-500">{t('attr.age_label')}</p>
+                <p className="font-body text-sm text-gray-400">{horse.age} {t('attr.years')}</p>
               </div>
               <div>
-                <p className="font-body text-xs uppercase tracking-widest text-gray-500">Color</p>
-                <p className="font-body text-sm text-gray-400">{horse.color}</p>
+                <p className="font-body text-xs uppercase tracking-widest text-gray-500">{t('attr.color_label')}</p>
+                <p className="font-body text-sm text-gray-400">{t(`attr.color.${horse.color}`)}</p>
               </div>
               <div>
-                <p className="font-body text-xs uppercase tracking-widest text-gray-500">Alzada</p>
+                <p className="font-body text-xs uppercase tracking-widest text-gray-500">{t('attr.height_label')}</p>
                 <p className="font-body text-sm text-gray-400">{horse.heightHH} HH</p>
               </div>
             </div>
