@@ -82,11 +82,11 @@ To compress the video run:
 ffmpeg -i "hero.mp4" -vcodec libx264 -crf 28 -preset slow -vf "scale=1920:-2" -movflags +faststart -an "hero-optimized.mp4"
 ```
 
-### Replacing Placeholder Images
+### Replacing Images
 
-All images currently use Unsplash URLs. To replace with real photos:
+All images are served locally from `public/assets/horses/`. To replace with new photos:
 
-1. Add images to `public/images/` or use a CDN
+1. Add images to `public/assets/horses/`
 2. In `src/data/horses.js`: update the `images` array for each horse
 3. In page hero sections: update the `src` attribute on `<img>` tags
 4. Recommended image sizes: hero 1920×1080, cards 800×600, thumbnails 400×400
@@ -154,6 +154,5 @@ Then reference via `import.meta.env.VITE_FORMSPREE_ID`.
 ## Credits
 
 - **Design & Development**: Built with React, Tailwind CSS, and Framer Motion
-- **Images**: [Unsplash](https://unsplash.com) (placeholder photos)
 - **Fonts**: [Google Fonts](https://fonts.google.com) — Bebas Neue, Montserrat, Jost
 - **Icons**: [React Icons](https://react-icons.github.io/react-icons/) — Feather Icons, Font Awesome

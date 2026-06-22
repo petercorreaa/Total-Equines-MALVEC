@@ -68,6 +68,7 @@ function HeroSection({ horse, t }) {
             horse.color,
             `${horse.heightHH} HH`,
             `HCP ${horse.poloHandicap}`,
+            ...(horse.registration ? [`REG. ${horse.registration}`] : []),
           ].map((stat) => (
             <span
               key={stat}
@@ -93,6 +94,7 @@ function DetailsSection({ horse, t }) {
     { label: t('ventas.detail_sex'), value: horse.sex },
     { label: t('ventas.detail_color'), value: horse.color },
     { label: t('ventas.detail_height'), value: `${horse.heightHH} HH` },
+    { label: 'N° de Registro', value: horse.registration || 'No disponible' },
   ];
 
   const waText = encodeURIComponent(`${t('ventas.detail_wa_message')} ${horse.name}`);
@@ -167,7 +169,7 @@ function DetailsSection({ horse, t }) {
               <p className="mb-6 font-body text-xs uppercase tracking-[0.4em] text-gold">
                 {t('ventas.detail_pedigree')}
               </p>
-              <PedigreeChart pedigree={horse.pedigree} horseName={horse.name} />
+              <PedigreeChart pedigree={horse.pedigree} horseName={horse.name} gen5plus={horse.gen5plus} />
             </AnimatedSection>
           </div>
 

@@ -18,19 +18,19 @@ const timelineItems = [
 
 const teamMembers = [
   {
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80',
+    image: '/assets/horses/total-bomba.webp',
     nameKey: 'nosotros.team_1_name',
     roleKey: 'nosotros.team_1_role',
     bioKey: 'nosotros.team_1_bio',
   },
   {
-    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80',
+    image: '/assets/horses/total-cali.webp',
     nameKey: 'nosotros.team_2_name',
     roleKey: 'nosotros.team_2_role',
     bioKey: 'nosotros.team_2_bio',
   },
   {
-    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80',
+    image: '/assets/horses/total-maravilla.webp',
     nameKey: 'nosotros.team_3_name',
     roleKey: 'nosotros.team_3_role',
     bioKey: 'nosotros.team_3_bio',
@@ -74,7 +74,7 @@ function HeroSection({ t }) {
     <section className="relative h-screen w-full overflow-hidden">
       <div className="absolute inset-0">
         <img loading="eager" decoding="async" fetchpriority="high"
-          src="https://images.unsplash.com/photo-1598974357801-cbca100e65d3?w=1920&q=80"
+          src="/assets/horses/total-rayo.webp"
           alt=""
           className="h-full w-full object-cover"
         />
@@ -176,14 +176,14 @@ function BrandStorySection({ t }) {
             <div className="relative">
               <div className="img-fade-bottom rounded-3xl overflow-hidden">
                 <img decoding="async" loading="lazy"
-                  src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=800&q=80"
+                  src="/assets/horses/total-lola.webp"
                   alt=""
                   className="w-full rounded-3xl object-cover"
                 />
               </div>
               <div className="img-fade-bottom rounded-3xl overflow-hidden mt-4 lg:-mt-20 lg:ml-8 lg:w-4/5">
                 <img decoding="async" loading="lazy"
-                  src="https://images.unsplash.com/photo-1601758124510-52d02ddb7cbd?w=800&q=80"
+                  src="/assets/horses/total-eclipse.webp"
                   alt=""
                   className="w-full rounded-3xl border-4 border-black object-cover"
                 />

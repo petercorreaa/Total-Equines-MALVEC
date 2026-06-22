@@ -143,7 +143,14 @@ export default function Footer() {
               &copy; 2026 Total Equines. {t('footer.rights')}
             </p>
             <p className="font-body text-xs text-gray-500">
-              {t('footer.developed')}
+              <a
+                href="https://malvec.studio/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-colors hover:text-gold"
+              >
+                {t('footer.developed')}
+              </a>
             </p>
           </div>
         </div>

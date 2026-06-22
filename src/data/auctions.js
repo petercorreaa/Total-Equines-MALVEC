@@ -18,7 +18,7 @@ export const auctions = [
     description:
       'Nuestra subasta más importante del año. Presentamos una selección excepcional de 8 ejemplares criados en Total Equines, incluyendo yeguas de alto rendimiento y castrados con experiencia en Palermo.',
     horseIds: slice1,
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80',
+    image: '/assets/horses/total-sachenca.webp',
     registrationLink: '#',
   },
   {
@@ -34,7 +34,7 @@ export const auctions = [
     description:
       'El evento ecuestre más esperado del año. Cierre de temporada con los mejores ejemplares de nuestra producción anual. Incluye visita a la estancia, almuerzo y recorrido por las instalaciones.',
     horseIds: slice2,
-    image: 'https://images.unsplash.com/photo-1534307671554-9a6d81f4d629?w=1200&q=80',
+    image: '/assets/horses/total-gonna.webp',
     registrationLink: '#',
   },
   {
@@ -50,7 +50,7 @@ export const auctions = [
     description:
       'Nuestra subasta de primavera 2024 fue un éxito rotundo con la participación de compradores de 8 países. Se vendieron los 7 ejemplares presentados.',
     horseIds: slice3,
-    image: 'https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=1200&q=80',
+    image: '/assets/horses/total-lola.webp',
     results: {
       totalSold: 7,
       countries: [

@@ -1,15 +1,12 @@
-import { pedigreePatches } from './pedigreePatches.js';
+import { realPedigrees } from './realPedigrees.js';
 
-const imgs = [
-  'https://images.unsplash.com/photo-1534307671554-9a6d81f4d629?w=800&q=80',
-  'https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=800&q=80',
-  'https://images.unsplash.com/photo-1601758124510-52d02ddb7cbd?w=800&q=80',
-  'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
-  'https://images.unsplash.com/photo-1598974357801-cbca100e65d3?w=800&q=80',
-  'https://images.unsplash.com/photo-1590249975800-60d53b0e0c46?w=800&q=80',
-];
-
-const img = (a, b, c) => [imgs[a], imgs[b], imgs[c]];
+// Gray placeholder shown for horses that do not yet have a routed local image.
+const placeholderImg =
+  'data:image/svg+xml,' +
+  encodeURIComponent(
+    '<svg xmlns="http://www.w3.org/2000/svg" width="600" height="450"><rect width="100%" height="100%" fill="#2b2b2b"/><text x="50%" y="50%" fill="#8a8a8a" font-family="Arial, sans-serif" font-size="48" letter-spacing="10" text-anchor="middle" dominant-baseline="central">IMAGEN</text></svg>'
+  );
+const placeholderImages = [placeholderImg, placeholderImg, placeholderImg];
 
 const _horses = [
   {
@@ -37,7 +34,7 @@ const _horses = [
       damSire: { name: 'Fuego Pampeano', origin: 'ARG' },
       damDam: { name: 'Luna del Sur', origin: 'ARG' },
     },
-    images: ['/assets/horses/total-gonna.webp', imgs[1], imgs[2]],
+    images: ['/assets/horses/total-gonna.webp'],
   },
   {
     id: 'total-panamera',
@@ -64,7 +61,7 @@ const _horses = [
       damSire: { name: 'Open Libertad', origin: 'ARG' },
       damDam: { name: 'La Mora II', origin: 'ARG' },
     },
-    images: img(1, 2, 3),
+    images: placeholderImages,
   },
   {
     id: 'total-madame',
@@ -92,7 +89,7 @@ const _horses = [
       damSire: { name: 'Fuego Pampeano', origin: 'ARG' },
       damDam: { name: 'Brisa del Campo', origin: 'ARG' },
     },
-    images: img(2, 3, 4),
+    images: placeholderImages,
   },
   {
     id: 'total-forever',
@@ -119,7 +116,7 @@ const _horses = [
       damSire: { name: 'Open Libertad', origin: 'ARG' },
       damDam: { name: 'Reina del Plata', origin: 'ARG' },
     },
-    images: img(3, 4, 5),
+    images: placeholderImages,
   },
   {
     id: 'total-lola',
@@ -146,7 +143,7 @@ const _horses = [
       damSire: { name: 'Silver Moon', origin: 'NZ' },
       damDam: { name: 'Estrella Austral', origin: 'ARG' },
     },
-    images: ['/assets/horses/total-lola.webp', imgs[4], imgs[5]],
+    images: ['/assets/horses/total-lola.webp'],
   },
   {
     id: 'total-eclipse',
@@ -173,7 +170,7 @@ const _horses = [
       damSire: { name: 'Dorado del Sur', origin: 'ARG' },
       damDam: { name: 'Kiwi Star', origin: 'NZ' },
     },
-    images: ['/assets/horses/total-eclipse.webp', imgs[5], imgs[0]],
+    images: ['/assets/horses/total-eclipse.webp'],
   },
   {
     id: 'total-sachenca',
@@ -200,7 +197,7 @@ const _horses = [
       damSire: { name: 'Dorado Viejo', origin: 'ARG' },
       damDam: { name: 'Reina Dorada', origin: 'ARG' },
     },
-    images: ['/assets/horses/total-sachenca.webp', imgs[0], imgs[2]],
+    images: ['/assets/horses/total-sachenca.webp'],
   },
   {
     id: 'total-chinita',
@@ -228,7 +225,7 @@ const _horses = [
       damSire: { name: 'Fuego Pampeano', origin: 'ARG' },
       damDam: { name: 'Dorada Real', origin: 'ARG' },
     },
-    images: ['/assets/horses/total-chinita.webp', imgs[3], imgs[5]],
+    images: ['/assets/horses/total-chinita.webp'],
   },
   {
     id: 'fax-valquiria',
@@ -256,7 +253,7 @@ const _horses = [
       damSire: { name: 'Fuego Pampeano', origin: 'ARG' },
       damDam: { name: 'Brava del Campo', origin: 'ARG' },
     },
-    images: ['/assets/horses/fax-valquiria.webp', imgs[5], imgs[1]],
+    images: ['/assets/horses/fax-valquiria.webp'],
   },
   {
     id: 'total-athenea',
@@ -283,7 +280,7 @@ const _horses = [
       damSire: { name: 'Equilibrio', origin: 'ARG' },
       damDam: { name: 'Calma Serena', origin: 'ARG' },
     },
-    images: ['/assets/horses/total-athenea.webp', imgs[0], imgs[2]],
+    images: ['/assets/horses/total-athenea.webp'],
   },
   {
     id: 'total-rayo',
@@ -310,7 +307,7 @@ const _horses = [
       damSire: { name: 'Fuego Pampeano', origin: 'ARG' },
       damDam: { name: 'Calma Serena', origin: 'ARG' },
     },
-    images: ['/assets/horses/total-rayo.webp', imgs[1], imgs[3]],
+    images: ['/assets/horses/total-rayo.webp'],
   },
   {
     id: 'total-malva',
@@ -337,7 +334,7 @@ const _horses = [
       damSire: { name: 'Open Libertad', origin: 'ARG' },
       damDam: { name: 'Tormenta', origin: 'ARG' },
     },
-    images: ['/assets/horses/total-malva.webp', imgs[0], imgs[3]],
+    images: ['/assets/horses/total-malva.webp'],
   },
   {
     id: 'total-bomba',
@@ -364,7 +361,7 @@ const _horses = [
       damSire: { name: 'Federal Gaucho', origin: 'ARG' },
       damDam: { name: 'Estrella Polar', origin: 'ARG' },
     },
-    images: ['/assets/horses/total-bomba.webp', imgs[1], imgs[4]],
+    images: ['/assets/horses/total-bomba.webp'],
   },
   {
     id: 'total-cali',
@@ -391,7 +388,7 @@ const _horses = [
       damSire: { name: 'Tobiano Real', origin: 'ARG' },
       damDam: { name: 'Mancha del Sur', origin: 'ARG' },
     },
-    images: ['/assets/horses/total-cali.webp', imgs[2], imgs[5]],
+    images: ['/assets/horses/total-cali.webp'],
   },
   {
     id: 'total-sospecha',
@@ -418,7 +415,7 @@ const _horses = [
       damSire: { name: 'Rayo Azul', origin: 'ARG' },
       damDam: { name: 'Veloz Celeste', origin: 'ARG' },
     },
-    images: img(4, 2, 1),
+    images: placeholderImages,
   },
   {
     id: 'total-payaso',
@@ -445,7 +442,7 @@ const _horses = [
       damSire: { name: 'Trueno Negro', origin: 'ARG' },
       damDam: { name: 'Noche Oscura', origin: 'ARG' },
     },
-    images: ['/assets/horses/total-payaso.webp', imgs[0], imgs[4]],
+    images: ['/assets/horses/total-payaso.webp'],
   },
   {
     id: 'neike-dakota',
@@ -472,7 +469,7 @@ const _horses = [
       damSire: { name: 'Silver King', origin: 'UK' },
       damDam: { name: 'Plata Criolla', origin: 'ARG' },
     },
-    images: img(5, 3, 2),
+    images: placeholderImages,
   },
   {
     id: 'total-syrah',
@@ -499,7 +496,7 @@ const _horses = [
       damSire: { name: 'Fuego Pampeano', origin: 'ARG' },
       damDam: { name: 'Llamarada', origin: 'ARG' },
     },
-    images: img(0, 4, 3),
+    images: placeholderImages,
   },
   {
     id: 'total-naipe',
@@ -527,7 +524,7 @@ const _horses = [
       damSire: { name: 'Cóndor Real', origin: 'ARG' },
       damDam: { name: 'Sombra del Andes', origin: 'ARG' },
     },
-    images: ['/assets/horses/total-naipe.webp', imgs[5], imgs[4]],
+    images: ['/assets/horses/total-naipe.webp'],
   },
   {
     id: 'total-regalito',
@@ -554,7 +551,7 @@ const _horses = [
       damSire: { name: 'Fuego Pampeano', origin: 'ARG' },
       damDam: { name: 'Mariposa del Sur', origin: 'ARG' },
     },
-    images: ['/assets/horses/total-regalito.webp', imgs[0], imgs[5]],
+    images: ['/assets/horses/total-regalito.webp'],
   },
   {
     id: 'total-vertichenca',
@@ -582,7 +579,7 @@ const _horses = [
       damSire: { name: 'Río Bravo', origin: 'ARG' },
       damDam: { name: 'Platense', origin: 'ARG' },
     },
-    images: ['/assets/horses/total-vertichenca.webp', imgs[3], imgs[1]],
+    images: ['/assets/horses/total-vertichenca.webp'],
   },
   {
     id: 'total-samibec',
@@ -609,7 +606,7 @@ const _horses = [
       damSire: { name: 'Fuego Pampeano', origin: 'ARG' },
       damDam: { name: 'Luz del Alba', origin: 'ARG' },
     },
-    images: ['/assets/horses/total-samibec.webp', imgs[4], imgs[2]],
+    images: ['/assets/horses/total-samibec.webp'],
   },
   {
     id: 'total-rose',
@@ -636,7 +633,7 @@ const _horses = [
       damSire: { name: 'Gigante', origin: 'BRA' },
       damDam: { name: 'Robusta del Sur', origin: 'ARG' },
     },
-    images: ['/assets/horses/total-rose.webp', imgs[4], imgs[1]],
+    images: ['/assets/horses/total-rose.webp'],
   },
   {
     id: 'total-montblanc',
@@ -663,7 +660,7 @@ const _horses = [
       damSire: { name: 'Open Libertad', origin: 'ARG' },
       damDam: { name: 'Reina Gaucha', origin: 'ARG' },
     },
-    images: ['/assets/horses/total-montblanc.webp', imgs[5], imgs[2]],
+    images: ['/assets/horses/total-montblanc.webp'],
   },
   {
     id: 'total-taquito',
@@ -691,7 +688,7 @@ const _horses = [
       damSire: { name: 'Sol Invictus', origin: 'ARG' },
       damDam: { name: 'Victoria Primera', origin: 'ARG' },
     },
-    images: ['/assets/horses/total-taquito.webp', imgs[2], imgs[0]],
+    images: ['/assets/horses/total-taquito.webp'],
   },
   {
     id: 'total-croto',
@@ -718,7 +715,7 @@ const _horses = [
       damSire: { name: 'Gran Titan', origin: 'ARG' },
       damDam: { name: 'Fuerza Austral', origin: 'ARG' },
     },
-    images: ['/assets/horses/total-croto.webp', imgs[3], imgs[1]],
+    images: ['/assets/horses/total-croto.webp'],
   },
   {
     id: 'total-maravilla',
@@ -745,7 +742,7 @@ const _horses = [
       damSire: { name: 'Equilibrio', origin: 'ARG' },
       damDam: { name: 'Rosa del Prado', origin: 'ARG' },
     },
-    images: ['/assets/horses/total-maravilla.webp', imgs[5], imgs[0]],
+    images: ['/assets/horses/total-maravilla.webp'],
   },
   {
     id: 'total-ilusion',
@@ -772,7 +769,7 @@ const _horses = [
       damSire: { name: 'Open Libertad', origin: 'ARG' },
       damDam: { name: 'Centella', origin: 'ARG' },
     },
-    images: ['/assets/horses/total-ilusion.webp', imgs[0], imgs[1]],
+    images: ['/assets/horses/total-ilusion.webp'],
   },
   {
     id: 'total-halovy',
@@ -800,7 +797,7 @@ const _horses = [
       damSire: { name: 'Patrón Real', origin: 'ARG' },
       damDam: { name: 'Señora del Norte', origin: 'ARG' },
     },
-    images: ['/assets/horses/total-halovy.webp', imgs[2], imgs[4]],
+    images: ['/assets/horses/total-halovy.webp'],
   },
   {
     id: 'total-xenona',
@@ -827,7 +824,7 @@ const _horses = [
       damSire: { name: 'Fuego Pampeano', origin: 'ARG' },
       damDam: { name: 'Marina del Sur', origin: 'ARG' },
     },
-    images: ['/assets/horses/total-xenona.webp', imgs[3], imgs[1]],
+    images: ['/assets/horses/total-xenona.webp'],
   },
   {
     id: 'total-messina',
@@ -854,7 +851,7 @@ const _horses = [
       damSire: { name: 'Dorado Viejo', origin: 'ARG' },
       damDam: { name: 'Estrella Fugaz', origin: 'ARG' },
     },
-    images: ['/assets/horses/total-messina.webp', imgs[4], imgs[2]],
+    images: ['/assets/horses/total-messina.webp'],
   },
   {
     id: 'total-jampine',
@@ -881,7 +878,7 @@ const _horses = [
       damSire: { name: 'Picazo Real', origin: 'ARG' },
       damDam: { name: 'Manchita', origin: 'ARG' },
     },
-    images: img(4, 5, 0),
+    images: placeholderImages,
   },
   {
     id: 'total-nica',
@@ -909,7 +906,7 @@ const _horses = [
       damSire: { name: 'Fuego Pampeano', origin: 'ARG' },
       damDam: { name: 'Perla Negra', origin: 'ARG' },
     },
-    images: ['/assets/horses/total-nica.webp', imgs[1], imgs[3]],
+    images: ['/assets/horses/total-nica.webp'],
   },
   {
     id: 'total-shiva',
@@ -936,7 +933,7 @@ const _horses = [
       damSire: { name: 'Pampero del Este', origin: 'ARG' },
       damDam: { name: 'Salvaje Criolla', origin: 'ARG' },
     },
-    images: img(0, 2, 3),
+    images: placeholderImages,
   },
   {
     id: 'total-emboscada',
@@ -963,7 +960,7 @@ const _horses = [
       damSire: { name: 'Pacific Storm', origin: 'NZ' },
       damDam: { name: 'Luna Llena', origin: 'ARG' },
     },
-    images: ['/assets/horses/total-emboscada.webp', imgs[3], imgs[4]],
+    images: ['/assets/horses/total-emboscada.webp'],
   },
   {
     id: 'total-cachito',
@@ -991,7 +988,7 @@ const _horses = [
       damSire: { name: 'Gaucho Viejo', origin: 'ARG' },
       damDam: { name: 'Fortuna', origin: 'ARG' },
     },
-    images: ['/assets/horses/total-cachito.webp', imgs[4], imgs[5]],
+    images: ['/assets/horses/total-cachito.webp'],
   },
   {
     id: 'total-diesel',
@@ -1018,7 +1015,7 @@ const _horses = [
       damSire: { name: 'Taita Supremo', origin: 'ARG' },
       damDam: { name: 'Aurora Dorada', origin: 'ARG' },
     },
-    images: ['/assets/horses/total-diesel.webp', imgs[5], imgs[0]],
+    images: ['/assets/horses/total-diesel.webp'],
   },
   {
     id: 'irenita-cracker',
@@ -1045,7 +1042,7 @@ const _horses = [
       damSire: { name: 'Borren Bandeja', origin: 'ARG' },
       damDam: { name: 'Machitos Parker / Machitos Jaz', origin: 'ARG' },
     },
-    images: ['/assets/horses/irenita-cracker.webp', imgs[0], imgs[2]],
+    images: ['/assets/horses/irenita-cracker.webp'],
   },
   {
     id: 'irenita-pechosa',
@@ -1072,7 +1069,7 @@ const _horses = [
       damSire: { name: 'Ellerstina Sospechosa', origin: 'ARG' },
       damDam: { name: 'Irenita Electo / Ellerstina Elegida', origin: 'ARG' },
     },
-    images: ['/assets/horses/irenita-pechosa.webp', imgs[1], imgs[3]],
+    images: ['/assets/horses/irenita-pechosa.webp'],
   },
   {
     id: 'onami-macarena',
@@ -1099,7 +1096,7 @@ const _horses = [
       damSire: { name: 'Artic Real', origin: 'ARG' },
       damDam: { name: 'Reina del Sur', origin: 'ARG' },
     },
-    images: ['/assets/horses/oñami-macarena.webp', imgs[2], imgs[4]],
+    images: ['/assets/horses/oñami-macarena.webp'],
   },
   {
     id: 'total-nico',
@@ -1126,7 +1123,7 @@ const _horses = [
       damSire: { name: 'Don Ercole Grace', origin: 'ARG' },
       damDam: { name: '', origin: 'ARG' },
     },
-    images: ['/assets/horses/total-nico.webp', imgs[3], imgs[5]],
+    images: ['/assets/horses/total-nico.webp'],
   },
   {
     id: 'total-silguina',
@@ -1153,7 +1150,7 @@ const _horses = [
       damSire: { name: '', origin: 'U.S.A' },
       damDam: { name: '', origin: 'ARG' },
     },
-    images: ['/assets/horses/total-silguina.webp', imgs[4], imgs[0]],
+    images: ['/assets/horses/total-silguina.webp'],
   },
   {
     id: 'total-silvio',
@@ -1180,15 +1177,32 @@ const _horses = [
       damSire: { name: '', origin: '' },
       damDam: { name: '', origin: 'ARG' },
     },
-    images: ['/assets/horses/total-silvio.webp', imgs[5], imgs[1]],
+    images: ['/assets/horses/total-silvio.webp'],
   },
 ];
 
+// Normalize a name for matching: strip accents, lowercase, drop non-alphanumerics.
+const normalizeName = (s) =>
+  (s || '')
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]/g, '');
+
+// Merge the verified real pedigree data (src/data/realPedigrees.js) onto each horse.
+// The real data fully REPLACES the old pedigree object and adds registration + gen5plus.
+// The existing display `sex` field (Yegua / Castrado / Macho) is intentionally preserved.
 export const horses = _horses.map((horse) => {
-  const patch = pedigreePatches.find(
-    (p) => p.name.toLowerCase() === horse.name.toLowerCase()
+  const real = realPedigrees.find(
+    (r) => normalizeName(r.name) === normalizeName(horse.name)
   );
-  return patch ? { ...horse, pedigree: patch.pedigree } : horse;
+  if (!real) return horse;
+  return {
+    ...horse,
+    registration: real.registration,
+    pedigree: real.pedigree,
+    gen5plus: real.gen5plus,
+  };
 });
 
 export const getHorseById = (id) => horses.find((h) => h.id === id);

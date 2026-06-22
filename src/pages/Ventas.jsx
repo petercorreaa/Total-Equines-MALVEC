@@ -44,7 +44,7 @@ function HeroSection({ t }) {
     <section className="relative flex min-h-[70vh] w-full items-center justify-center overflow-hidden">
       <div className="absolute inset-0">
         <img loading="eager" decoding="async" fetchpriority="high"
-          src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=80"
+          src="/assets/horses/total-sachenca.webp"
           alt=""
           className="h-full w-full object-cover"
         />

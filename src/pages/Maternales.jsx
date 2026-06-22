@@ -5,7 +5,7 @@ import SEOMeta from '@/components/layout/SEOMeta';
 
 const maternalLines = [
   {
-    image: 'https://images.unsplash.com/photo-1534307671554-9a6d81f4d629?w=600&q=80',
+    image: '/assets/horses/total-gonna.webp',
     nameKey: 'maternales.line_1_name',
     originKey: 'maternales.line_1_origin',
     descKey: 'maternales.line_1_desc',
@@ -13,7 +13,7 @@ const maternalLines = [
     offspringKey: 'maternales.line_1_offspring',
   },
   {
-    image: 'https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=600&q=80',
+    image: '/assets/horses/total-lola.webp',
     nameKey: 'maternales.line_2_name',
     originKey: 'maternales.line_2_origin',
     descKey: 'maternales.line_2_desc',
@@ -21,7 +21,7 @@ const maternalLines = [
     offspringKey: 'maternales.line_2_offspring',
   },
   {
-    image: 'https://images.unsplash.com/photo-1601758124510-52d02ddb7cbd?w=600&q=80',
+    image: '/assets/horses/total-eclipse.webp',
     nameKey: 'maternales.line_3_name',
     originKey: 'maternales.line_3_origin',
     descKey: 'maternales.line_3_desc',
@@ -29,7 +29,7 @@ const maternalLines = [
     offspringKey: 'maternales.line_3_offspring',
   },
   {
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80',
+    image: '/assets/horses/total-sachenca.webp',
     nameKey: 'maternales.line_4_name',
     originKey: 'maternales.line_4_origin',
     descKey: 'maternales.line_4_desc',
@@ -37,7 +37,7 @@ const maternalLines = [
     offspringKey: 'maternales.line_4_offspring',
   },
   {
-    image: 'https://images.unsplash.com/photo-1598974357801-cbca100e65d3?w=600&q=80',
+    image: '/assets/horses/total-rayo.webp',
     nameKey: 'maternales.line_5_name',
     originKey: 'maternales.line_5_origin',
     descKey: 'maternales.line_5_desc',
@@ -45,7 +45,7 @@ const maternalLines = [
     offspringKey: 'maternales.line_5_offspring',
   },
   {
-    image: 'https://images.unsplash.com/photo-1590249975800-60d53b0e0c46?w=600&q=80',
+    image: '/assets/horses/total-malva.webp',
     nameKey: 'maternales.line_6_name',
     originKey: 'maternales.line_6_origin',
     descKey: 'maternales.line_6_desc',
@@ -74,7 +74,7 @@ function HeroSection({ t }) {
     <section className="relative flex min-h-[60vh] w-full items-center justify-center overflow-hidden">
       <div className="absolute inset-0">
         <img decoding="async" loading="eager" fetchpriority="high"
-          src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=1920&q=80"
+          src="/assets/horses/total-lola.webp"
           alt=""
           className="h-full w-full object-cover"
         />

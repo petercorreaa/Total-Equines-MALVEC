@@ -234,7 +234,7 @@ function CriaPreviewSection({ t }) {
     <section className="overflow-hidden">
       <div className="grid grid-cols-1 lg:grid-cols-2">
         <CriaColumn
-          image="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=1200&q=80"
+          image="/assets/horses/total-lola.webp"
           label={t('inicio.cria_label')}
           title={t('inicio.cria_maternales_title')}
           text={t('inicio.cria_maternales_text')}
@@ -243,7 +243,7 @@ function CriaPreviewSection({ t }) {
           direction="left"
         />
         <CriaColumn
-          image="https://images.unsplash.com/photo-1601758124510-52d02ddb7cbd?w=1200&q=80"
+          image="/assets/horses/total-eclipse.webp"
           label={t('inicio.cria_label')}
           title={t('inicio.cria_padrillos_title')}
           text={t('inicio.cria_padrillos_text')}

@@ -5,7 +5,7 @@ import SEOMeta from '@/components/layout/SEOMeta';
 
 const stallions = [
   {
-    image: 'https://images.unsplash.com/photo-1534307671554-9a6d81f4d629?w=1200&q=80',
+    image: '/assets/horses/total-gonna.webp',
     nameKey: 'padrillos.s_1_name',
     originKey: 'padrillos.s_1_origin',
     breedKey: 'padrillos.s_1_breed',
@@ -16,7 +16,7 @@ const stallions = [
     breedingKeys: ['padrillos.s_1_b1', 'padrillos.s_1_b2', 'padrillos.s_1_b3'],
   },
   {
-    image: 'https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=1200&q=80',
+    image: '/assets/horses/total-lola.webp',
     nameKey: 'padrillos.s_2_name',
     originKey: 'padrillos.s_2_origin',
     breedKey: 'padrillos.s_2_breed',
@@ -27,7 +27,7 @@ const stallions = [
     breedingKeys: ['padrillos.s_2_b1', 'padrillos.s_2_b2', 'padrillos.s_2_b3'],
   },
   {
-    image: 'https://images.unsplash.com/photo-1601758124510-52d02ddb7cbd?w=1200&q=80',
+    image: '/assets/horses/total-eclipse.webp',
     nameKey: 'padrillos.s_3_name',
     originKey: 'padrillos.s_3_origin',
     breedKey: 'padrillos.s_3_breed',
@@ -38,7 +38,7 @@ const stallions = [
     breedingKeys: ['padrillos.s_3_b1', 'padrillos.s_3_b2', 'padrillos.s_3_b3'],
   },
   {
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80',
+    image: '/assets/horses/total-sachenca.webp',
     nameKey: 'padrillos.s_4_name',
     originKey: 'padrillos.s_4_origin',
     breedKey: 'padrillos.s_4_breed',
@@ -70,7 +70,7 @@ function HeroSection({ t }) {
     <section className="relative flex min-h-[60vh] w-full items-center justify-center overflow-hidden">
       <div className="absolute inset-0">
         <img decoding="async" loading="eager" fetchpriority="high"
-          src="https://images.unsplash.com/photo-1601758124510-52d02ddb7cbd?w=1920&q=80"
+          src="/assets/horses/total-eclipse.webp"
           alt=""
           className="h-full w-full object-cover"
         />

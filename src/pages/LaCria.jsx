@@ -52,7 +52,7 @@ function HeroSection({ t }) {
     <section className="relative h-screen w-full overflow-hidden">
       <div className="absolute inset-0">
         <img loading="eager" decoding="async" fetchpriority="high"
-          src="https://images.unsplash.com/photo-1534307671554-9a6d81f4d629?w=1920&q=80"
+          src="/assets/horses/total-gonna.webp"
           alt=""
           className="h-full w-full object-cover"
         />
@@ -180,7 +180,7 @@ function TwoPathsSection({ t }) {
       <div className="container-custom">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
           <PathCard
-            image="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=1200&q=80"
+            image="/assets/horses/total-lola.webp"
             label={t('lacria.card1_label')}
             title={t('lacria.card1_title')}
             text={t('lacria.card1_text')}
@@ -190,7 +190,7 @@ function TwoPathsSection({ t }) {
             t={t}
           />
           <PathCard
-            image="https://images.unsplash.com/photo-1601758124510-52d02ddb7cbd?w=1200&q=80"
+            image="/assets/horses/total-eclipse.webp"
             label={t('lacria.card2_label')}
             title={t('lacria.card2_title')}
             text={t('lacria.card2_text')}
