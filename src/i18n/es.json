@@ -56,7 +56,7 @@
   "footer": {
     "tagline": "Criando campeones desde las pampas argentinas para el mundo.",
     "rights": "Todos los derechos reservados.",
-    "developed": "Desarrollado con ♥ en Argentina",
+    "developed": "Powered by MALVEC",
     "navigation": "Navegación",
     "contact": "Contacto",
     "email": "contacto@totalequines.com.ar",
@@ -213,8 +213,8 @@
   "ventas": {
     "hero_label": "DISPONIBLES AHORA",
     "hero_title": "CABALLOS EN VENTA",
-    "hero_subtitle": "40 ejemplares disponibles para adquisición nacional e internacional.",
-    "stat_1": "40 Ejemplares",
+    "hero_subtitle": "43 ejemplares disponibles para adquisición nacional e internacional.",
+    "stat_1": "43 Ejemplares",
     "stat_2": "12 Países",
     "stat_3": "Exportación Certificada",
     "filter_all": "Todos",
@@ -225,7 +225,7 @@
     "filter_age_mid": "6–8 años",
     "filter_age_senior": "9–12 años",
     "filter_color": "Color",
-    "filter_results": "Mostrando {count} de 40 ejemplares",
+    "filter_results": "Mostrando {count} de 43 ejemplares",
     "filter_reset": "Restablecer filtros",
     "filter_empty": "No se encontraron ejemplares con los filtros seleccionados.",
     "card_ver_ficha": "VER FICHA COMPLETA",
@@ -351,5 +351,30 @@
     "newsletter_cta": "SUSCRIBIRME",
     "newsletter_thanks": "¡Gracias! Te avisaremos antes del próximo evento.",
     "newsletter_privacy": "Sin spam. Podés darte de baja cuando quieras."
+  },
+  "attr": {
+    "sex": {
+      "Yegua": "Yegua",
+      "Castrado": "Castrado",
+      "Macho": "Macho"
+    },
+    "color": {
+      "Zaino": "Zaino",
+      "Tordillo": "Tordillo",
+      "Alazán": "Alazán",
+      "Oscuro": "Oscuro",
+      "Bayo": "Bayo",
+      "Picazo": "Picazo",
+      "Tobiano": "Tobiano"
+    },
+    "origin": {
+      "Argentina": "Argentina"
+    },
+    "years": "años",
+    "age_label": "Edad",
+    "color_label": "Color",
+    "height_label": "Alzada",
+    "registration_label": "N° de Registro",
+    "not_available": "No disponible"
   }
 }

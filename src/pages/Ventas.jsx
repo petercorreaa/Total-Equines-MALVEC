@@ -1,7 +1,7 @@
 import { useState, useMemo, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from '@/hooks/useTranslation';
-import { horses } from '@/data/horses';
+import { horses, hasRealImage } from '@/data/horses';
 import AnimatedSection from '@/components/ui/AnimatedSection';
 import FilterBar from '@/components/ui/FilterBar';
 import HorseCard from '@/components/ui/HorseCard';
@@ -78,15 +78,15 @@ function HeroSection({ t }) {
         </motion.p>
         <motion.h1
           variants={fadeUp}
-          className="font-display uppercase text-4xl tracking-[0.08em] text-white sm:text-7xl lg:text-8xl"
-          style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}
+          className="font-display uppercase text-5xl tracking-[0.08em] text-white sm:text-7xl lg:text-8xl"
+          style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}
         >
           {t('ventas.hero_title')}
         </motion.h1>
         <motion.p
           variants={fadeUp}
           className="mt-4 font-heading uppercase text-xl font-light text-white/80"
-          style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}
+          style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}
         >
           {t('ventas.hero_subtitle')}
         </motion.p>
@@ -140,18 +140,22 @@ export default function Ventas() {
   });
 
   const filteredHorses = useMemo(() => {
-    return horses.filter((h) => {
-      if (filters.sex && h.sex !== filters.sex) return false;
+    return horses
+      .filter((h) => {
+        if (filters.sex && h.sex !== filters.sex) return false;
 
-      if (filters.age) {
-        const [min, max] = filters.age.split('-').map(Number);
-        if (h.age < min || h.age > max) return false;
-      }
+        if (filters.age) {
+          const [min, max] = filters.age.split('-').map(Number);
+          if (h.age < min || h.age > max) return false;
+        }
 
-      if (filters.color && h.color !== filters.color) return false;
+        if (filters.color && h.color !== filters.color) return false;
 
-      return true;
-    });
+        return true;
+      })
+      // Show horses with a real photo first so placeholder profiles never lead
+      // the catalog (stable sort preserves the original order within each group).
+      .sort((a, b) => hasRealImage(b) - hasRealImage(a));
   }, [filters]);
 
   return (

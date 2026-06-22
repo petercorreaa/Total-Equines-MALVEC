@@ -53,7 +53,7 @@ function CountdownTimer({ targetDate, auctionName, dateDisplay, location }) {
         <p className="mb-3 font-body text-xs uppercase tracking-[0.4em] text-gold">
           {t('subastas.countdown_label')}
         </p>
-        <h2 className="font-display uppercase text-3xl sm:text-5xl text-white" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>{auctionName}</h2>
+        <h2 className="font-display uppercase text-5xl text-white" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>{auctionName}</h2>
         <p className="mt-2 font-body text-base text-gray-400">
           {dateDisplay} · {location}
         </p>
@@ -68,7 +68,7 @@ function CountdownTimer({ targetDate, auctionName, dateDisplay, location }) {
                   transition={{ delay: i * 0.1, duration: 0.5 }}
                   className="min-w-[72px] rounded-2xl border border-gold/30 bg-white/[0.04] backdrop-blur-sm p-4 text-center sm:min-w-24 sm:p-6"
                 >
-                  <span className="font-display uppercase text-4xl text-gold sm:text-6xl" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>
+                  <span className="font-display uppercase text-4xl text-gold sm:text-6xl" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>
                     {String(b.value).padStart(2, '0')}
                   </span>
                   <p className="mt-1 font-body text-[10px] uppercase tracking-[0.3em] text-gray-500 sm:text-xs">
@@ -76,7 +76,7 @@ function CountdownTimer({ targetDate, auctionName, dateDisplay, location }) {
                   </p>
                 </motion.div>
                 {i < blocks.length - 1 && (
-                  <span className="hidden font-display uppercase text-4xl text-gold/40 sm:block" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>:</span>
+                  <span className="hidden font-display uppercase text-4xl text-gold/40 sm:block" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>:</span>
                 )}
               </div>
             ))
@@ -85,7 +85,7 @@ function CountdownTimer({ targetDate, auctionName, dateDisplay, location }) {
               animate={{ opacity: [1, 0.4, 1] }}
               transition={{ duration: 2, repeat: Infinity }}
               className="font-display uppercase text-4xl text-gold sm:text-5xl"
-              style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}
+              style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}
             >
               {t('subastas.countdown_live')}
             </motion.p>

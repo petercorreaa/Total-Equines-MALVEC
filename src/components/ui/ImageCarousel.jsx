@@ -1,47 +1,16 @@
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 export default function ImageCarousel({ images = [], horseName = '' }) {
-  const [activeIndex, setActiveIndex] = useState(0);
-
   if (!images.length) return null;
 
   return (
-    <>
-      {/* Main background image with crossfade */}
-      <AnimatePresence mode="wait">
-        <motion.img
-          key={images[activeIndex]}
-          src={images[activeIndex]}
-          alt={horseName}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.5 }}
-          className="absolute inset-0 h-full w-full object-cover object-center"
-        />
-      </AnimatePresence>
-
-      {/* Thumbnail strip — bottom right */}
-      <div className="absolute bottom-4 right-4 z-20 flex gap-2 sm:bottom-8 sm:right-8 sm:gap-3">
-        {images.map((img, i) => (
-          <button
-            key={i}
-            onClick={() => setActiveIndex(i)}
-            className={`h-12 w-16 overflow-hidden rounded-xl border-2 transition-all duration-300 sm:h-16 sm:w-24 lg:h-20 lg:w-28 ${
-              i === activeIndex
-                ? 'border-gold shadow-lg shadow-gold/20'
-                : 'border-transparent opacity-70 hover:opacity-100'
-            }`}
-          >
-            <img decoding="async"
-              src={img}
-              alt={`${horseName} ${i + 1}`}
-              className="h-full w-full object-cover"
-            />
-          </button>
-        ))}
-      </div>
-    </>
+    <motion.img
+      src={images[0]}
+      alt={horseName}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      className="absolute inset-0 h-full w-full object-cover object-center"
+    />
   );
 }

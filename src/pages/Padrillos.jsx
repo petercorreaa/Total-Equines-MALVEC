@@ -5,7 +5,7 @@ import SEOMeta from '@/components/layout/SEOMeta';
 
 const stallions = [
   {
-    image: 'https://images.unsplash.com/photo-1534307671554-9a6d81f4d629?w=1200&q=80',
+    image: '/assets/horses/total-gonna.webp',
     nameKey: 'padrillos.s_1_name',
     originKey: 'padrillos.s_1_origin',
     breedKey: 'padrillos.s_1_breed',
@@ -16,7 +16,7 @@ const stallions = [
     breedingKeys: ['padrillos.s_1_b1', 'padrillos.s_1_b2', 'padrillos.s_1_b3'],
   },
   {
-    image: 'https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=1200&q=80',
+    image: '/assets/horses/total-lola.webp',
     nameKey: 'padrillos.s_2_name',
     originKey: 'padrillos.s_2_origin',
     breedKey: 'padrillos.s_2_breed',
@@ -27,7 +27,7 @@ const stallions = [
     breedingKeys: ['padrillos.s_2_b1', 'padrillos.s_2_b2', 'padrillos.s_2_b3'],
   },
   {
-    image: 'https://images.unsplash.com/photo-1601758124510-52d02ddb7cbd?w=1200&q=80',
+    image: '/assets/horses/total-eclipse.webp',
     nameKey: 'padrillos.s_3_name',
     originKey: 'padrillos.s_3_origin',
     breedKey: 'padrillos.s_3_breed',
@@ -38,7 +38,7 @@ const stallions = [
     breedingKeys: ['padrillos.s_3_b1', 'padrillos.s_3_b2', 'padrillos.s_3_b3'],
   },
   {
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80',
+    image: '/assets/horses/total-sachenca.webp',
     nameKey: 'padrillos.s_4_name',
     originKey: 'padrillos.s_4_origin',
     breedKey: 'padrillos.s_4_breed',
@@ -104,15 +104,15 @@ function HeroSection({ t }) {
         </motion.p>
         <motion.h1
           variants={fadeUp}
-          className="font-display uppercase text-4xl tracking-[0.08em] text-white sm:text-7xl lg:text-8xl"
-          style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}
+          className="font-display uppercase text-5xl tracking-[0.08em] text-white sm:text-7xl lg:text-8xl"
+          style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}
         >
           {t('padrillos.hero_title')}
         </motion.h1>
         <motion.p
           variants={fadeUp}
           className="mt-4 font-heading uppercase text-xl font-light text-white/80"
-          style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}
+          style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}
         >
           {t('padrillos.hero_subtitle')}
         </motion.p>
@@ -154,8 +154,8 @@ function StallionCard({ stallion, index, t }) {
           <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent pointer-events-none" />
         </div>
 
-        <div className="p-4 sm:p-8">
-          <h3 className="font-display uppercase text-4xl tracking-[0.05em] text-white" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>
+        <div className="p-8">
+          <h3 className="font-display uppercase text-4xl tracking-[0.05em] text-white" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>
             {t(stallion.nameKey)}
           </h3>
 
@@ -180,7 +180,7 @@ function StallionCard({ stallion, index, t }) {
                 <p className="font-body text-xs uppercase tracking-widest text-gray-500">
                   {stat.label}
                 </p>
-                <p className="mt-1 font-heading uppercase text-xl font-semibold text-white" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>
+                <p className="mt-1 font-heading uppercase text-xl font-semibold text-white" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>
                   {stat.value}
                 </p>
               </div>

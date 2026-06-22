@@ -18,19 +18,19 @@ const timelineItems = [
 
 const teamMembers = [
   {
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80',
+    image: '/assets/horses/total-bomba.webp',
     nameKey: 'nosotros.team_1_name',
     roleKey: 'nosotros.team_1_role',
     bioKey: 'nosotros.team_1_bio',
   },
   {
-    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80',
+    image: '/assets/horses/total-cali.webp',
     nameKey: 'nosotros.team_2_name',
     roleKey: 'nosotros.team_2_role',
     bioKey: 'nosotros.team_2_bio',
   },
   {
-    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80',
+    image: '/assets/horses/total-maravilla.webp',
     nameKey: 'nosotros.team_3_name',
     roleKey: 'nosotros.team_3_role',
     bioKey: 'nosotros.team_3_bio',
@@ -108,15 +108,15 @@ function HeroSection({ t }) {
         </motion.p>
         <motion.h1
           variants={fadeUp}
-          className="font-display uppercase text-4xl tracking-[0.08em] text-white sm:text-7xl lg:text-8xl"
-          style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}
+          className="font-display uppercase text-5xl tracking-[0.08em] text-white sm:text-7xl lg:text-8xl"
+          style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}
         >
           {t('nosotros.hero_title')}
         </motion.h1>
         <motion.p
           variants={fadeUp}
           className="mt-4 font-heading uppercase text-xl font-light text-white/80"
-          style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}
+          style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}
         >
           {t('nosotros.hero_subtitle')}
         </motion.p>
@@ -155,7 +155,7 @@ function BrandStorySection({ t }) {
             <span className="mb-4 inline-block font-body text-xs tracking-[0.4em] uppercase text-gold">
               {t('nosotros.story_label')}
             </span>
-            <h2 className="font-display uppercase text-3xl sm:text-4xl text-white" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>
+            <h2 className="font-display uppercase text-4xl text-white sm:text-5xl" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>
               {t('nosotros.story_title')}
             </h2>
             <div className="my-6 h-0.5 w-16 rounded-full bg-gold" />
@@ -201,8 +201,8 @@ function TimelineItem({ item, index, t }) {
 
   const card = (
     <div className="rounded-2xl border border-gold/20 bg-white/[0.04] backdrop-blur-sm p-6">
-      <span className="font-display uppercase text-4xl text-gold" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>{item.year}</span>
-      <h3 className="mt-2 font-heading uppercase text-xl font-semibold text-white" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>
+      <span className="font-display uppercase text-4xl text-gold" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>{item.year}</span>
+      <h3 className="mt-2 font-heading uppercase text-xl font-semibold text-white" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>
         {t(item.titleKey)}
       </h3>
       <p className="mt-2 font-body text-base text-gray-400">
@@ -246,7 +246,7 @@ function TimelineSection({ t }) {
           <span className="mb-4 inline-block font-body text-xs tracking-[0.4em] uppercase text-gold">
             {t('nosotros.timeline_label')}
           </span>
-          <h2 className="font-display uppercase text-3xl sm:text-5xl text-white" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>
+          <h2 className="font-display uppercase text-5xl text-white sm:text-6xl" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>
             {t('nosotros.timeline_title')}
           </h2>
         </AnimatedSection>
@@ -272,8 +272,8 @@ function TeamSection({ t }) {
           <span className="mb-4 inline-block font-body text-xs tracking-[0.4em] uppercase text-gold">
             {t('nosotros.team_label')}
           </span>
-          <h2 className="font-display uppercase text-3xl sm:text-5xl text-white" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>
-          {t('nosotros.team_title')}
+          <h2 className="font-display uppercase text-5xl text-white sm:text-6xl" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>
+            {t('nosotros.team_title')}
           </h2>
         </AnimatedSection>
 
@@ -290,7 +290,7 @@ function TeamSection({ t }) {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />
                 </div>
                 <div className="p-6">
-                  <h3 className="font-heading uppercase text-xl font-semibold text-white" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>
+                  <h3 className="font-heading uppercase text-xl font-semibold text-white" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>
                     {t(member.nameKey)}
                   </h3>
                   <p className="mt-1 font-body text-sm uppercase tracking-widest text-gold">
@@ -323,7 +323,7 @@ function MissionSection({ t }) {
             transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
             className="text-center"
           >
-            <h2 className="font-display uppercase text-3xl sm:text-5xl leading-tight text-white lg:text-8xl" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>
+            <h2 className="font-display uppercase text-5xl leading-tight text-white sm:text-6xl lg:text-8xl" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>
               {t('nosotros.mission_before')}
               <span className="text-gradient-gold">
                 {t('nosotros.mission_highlight')}

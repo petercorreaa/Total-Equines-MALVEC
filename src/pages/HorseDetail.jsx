@@ -2,7 +2,9 @@ import { useState, useMemo } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useTranslation } from '@/hooks/useTranslation';
+import { useLanguage } from '@/context/LanguageContext';
 import { horses, getHorseById } from '@/data/horses';
+import { localizeHorse } from '@/data/horseTranslations';
 import AnimatedSection from '@/components/ui/AnimatedSection';
 import GoldDivider from '@/components/ui/GoldDivider';
 import ImageCarousel from '@/components/ui/ImageCarousel';
@@ -56,18 +58,19 @@ function HeroSection({ horse, t }) {
           {' / '}{horse.name}
         </p>
 
-        <h1 className="mt-3 font-display uppercase text-3xl tracking-[0.05em] text-white sm:text-5xl lg:text-9xl" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>
+        <h1 className="mt-3 font-display uppercase text-5xl tracking-[0.05em] text-white sm:text-7xl lg:text-9xl" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>
           {horse.name}
         </h1>
 
         {/* Stat pills */}
         <div className="mt-4 flex flex-wrap gap-3">
           {[
-            `${horse.age} años`,
-            horse.sex,
-            horse.color,
+            `${horse.age} ${t('attr.years')}`,
+            t(`attr.sex.${horse.sex}`),
+            t(`attr.color.${horse.color}`),
             `${horse.heightHH} HH`,
             `HCP ${horse.poloHandicap}`,
+            ...(horse.registration ? [`REG. ${horse.registration}`] : []),
           ].map((stat) => (
             <span
               key={stat}
@@ -87,12 +90,13 @@ function HeroSection({ horse, t }) {
 
 function DetailsSection({ horse, t }) {
   const detailItems = [
-    { label: t('ventas.detail_origin'), value: horse.origin },
+    { label: t('ventas.detail_origin'), value: t(`attr.origin.${horse.origin}`) },
     { label: t('ventas.detail_breeder'), value: horse.breeder },
     { label: t('ventas.detail_trainer'), value: horse.trainedBy },
-    { label: t('ventas.detail_sex'), value: horse.sex },
-    { label: t('ventas.detail_color'), value: horse.color },
+    { label: t('ventas.detail_sex'), value: t(`attr.sex.${horse.sex}`) },
+    { label: t('ventas.detail_color'), value: t(`attr.color.${horse.color}`) },
     { label: t('ventas.detail_height'), value: `${horse.heightHH} HH` },
+    { label: t('attr.registration_label'), value: horse.registration || t('attr.not_available') },
   ];
 
   const waText = encodeURIComponent(`${t('ventas.detail_wa_message')} ${horse.name}`);
@@ -167,15 +171,15 @@ function DetailsSection({ horse, t }) {
               <p className="mb-6 font-body text-xs uppercase tracking-[0.4em] text-gold">
                 {t('ventas.detail_pedigree')}
               </p>
-              <PedigreeChart pedigree={horse.pedigree} horseName={horse.name} />
+              <PedigreeChart pedigree={horse.pedigree} horseName={horse.name} gen5plus={horse.gen5plus} />
             </AnimatedSection>
           </div>
 
           {/* Right column — sticky CTA */}
           <div className="lg:sticky lg:top-24 lg:self-start">
             <AnimatedSection direction="right">
-              <div className="rounded-3xl border border-gold/30 bg-white/[0.05] backdrop-blur-sm p-5 sm:p-8">
-                <h3 className="font-heading uppercase text-xl font-semibold text-white" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>
+              <div className="rounded-3xl border border-gold/30 bg-white/[0.05] backdrop-blur-sm p-8">
+                <h3 className="font-heading uppercase text-xl font-semibold text-white" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>
                   {horse.name}
                 </h3>
 
@@ -251,7 +255,7 @@ function RelatedSection({ horse, t }) {
     <section className="section-padding section-tint">
       <div className="container-custom">
         <AnimatedSection className="mb-12">
-          <h2 className="font-display uppercase text-3xl sm:text-4xl text-white" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>
+          <h2 className="font-display uppercase text-4xl text-white" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>
             {t('ventas.detail_related')}
           </h2>
         </AnimatedSection>
@@ -272,8 +276,8 @@ function NotFound({ t }) {
   return (
     <main className="flex min-h-screen items-center justify-center bg-transparent">
       <div className="text-center">
-        <h1 className="font-display uppercase text-6xl text-gold" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>404</h1>
-        <p className="mt-4 font-heading uppercase text-2xl font-semibold text-white" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>
+        <h1 className="font-display uppercase text-6xl text-gold" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>404</h1>
+        <p className="mt-4 font-heading uppercase text-2xl font-semibold text-white" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>
           {t('ventas.detail_not_found')}
         </p>
         <p className="mt-2 font-body text-gray-400">
@@ -295,7 +299,8 @@ function NotFound({ t }) {
 export default function HorseDetail() {
   const { id } = useParams();
   const { t } = useTranslation();
-  const horse = getHorseById(id);
+  const { language } = useLanguage();
+  const horse = localizeHorse(getHorseById(id), language);
 
   if (!horse) return <NotFound t={t} />;
 

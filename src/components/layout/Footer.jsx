@@ -90,7 +90,7 @@ export default function Footer() {
 
             {/* Column 2 — Navigation */}
             <motion.div variants={fadeUp} className="flex flex-col gap-6">
-              <h4 className="font-display uppercase text-lg tracking-wider text-gold" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>
+              <h4 className="font-display uppercase text-lg tracking-wider text-gold" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>
                 {t('footer.navigation')}
               </h4>
               <nav className="flex flex-col gap-3">
@@ -106,7 +106,7 @@ export default function Footer() {
 
             {/* Column 3 — Contact */}
             <motion.div variants={fadeUp} className="flex flex-col gap-6">
-              <h4 className="font-display uppercase text-lg tracking-wider text-gold" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>
+              <h4 className="font-display uppercase text-lg tracking-wider text-gold" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>
                 {t('footer.contact')}
               </h4>
               <div className="flex flex-col gap-4">
@@ -140,10 +140,17 @@ export default function Footer() {
         <div className="border-t border-gold/10">
           <div className="container-custom flex flex-col items-center justify-between gap-2 py-6 sm:flex-row">
             <p className="font-body text-xs text-gray-500">
-              &copy; 2025 Total Equines. {t('footer.rights')}
+              &copy; 2026 Total Equines. {t('footer.rights')}
             </p>
             <p className="font-body text-xs text-gray-500">
-              {t('footer.developed')}
+              <a
+                href="https://malvec.studio/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-colors hover:text-gold"
+              >
+                {t('footer.developed')}
+              </a>
             </p>
           </div>
         </div>

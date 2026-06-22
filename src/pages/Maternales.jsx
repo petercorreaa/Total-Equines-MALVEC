@@ -5,7 +5,7 @@ import SEOMeta from '@/components/layout/SEOMeta';
 
 const maternalLines = [
   {
-    image: 'https://images.unsplash.com/photo-1534307671554-9a6d81f4d629?w=600&q=80',
+    image: '/assets/horses/total-gonna.webp',
     nameKey: 'maternales.line_1_name',
     originKey: 'maternales.line_1_origin',
     descKey: 'maternales.line_1_desc',
@@ -13,7 +13,7 @@ const maternalLines = [
     offspringKey: 'maternales.line_1_offspring',
   },
   {
-    image: 'https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=600&q=80',
+    image: '/assets/horses/total-lola.webp',
     nameKey: 'maternales.line_2_name',
     originKey: 'maternales.line_2_origin',
     descKey: 'maternales.line_2_desc',
@@ -21,7 +21,7 @@ const maternalLines = [
     offspringKey: 'maternales.line_2_offspring',
   },
   {
-    image: 'https://images.unsplash.com/photo-1601758124510-52d02ddb7cbd?w=600&q=80',
+    image: '/assets/horses/total-eclipse.webp',
     nameKey: 'maternales.line_3_name',
     originKey: 'maternales.line_3_origin',
     descKey: 'maternales.line_3_desc',
@@ -29,7 +29,7 @@ const maternalLines = [
     offspringKey: 'maternales.line_3_offspring',
   },
   {
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80',
+    image: '/assets/horses/total-sachenca.webp',
     nameKey: 'maternales.line_4_name',
     originKey: 'maternales.line_4_origin',
     descKey: 'maternales.line_4_desc',
@@ -37,7 +37,7 @@ const maternalLines = [
     offspringKey: 'maternales.line_4_offspring',
   },
   {
-    image: 'https://images.unsplash.com/photo-1598974357801-cbca100e65d3?w=600&q=80',
+    image: '/assets/horses/total-rayo.webp',
     nameKey: 'maternales.line_5_name',
     originKey: 'maternales.line_5_origin',
     descKey: 'maternales.line_5_desc',
@@ -45,7 +45,7 @@ const maternalLines = [
     offspringKey: 'maternales.line_5_offspring',
   },
   {
-    image: 'https://images.unsplash.com/photo-1590249975800-60d53b0e0c46?w=600&q=80',
+    image: '/assets/horses/total-malva.webp',
     nameKey: 'maternales.line_6_name',
     originKey: 'maternales.line_6_origin',
     descKey: 'maternales.line_6_desc',
@@ -108,15 +108,15 @@ function HeroSection({ t }) {
         </motion.p>
         <motion.h1
           variants={fadeUp}
-          className="font-display uppercase text-4xl tracking-[0.08em] text-white sm:text-7xl lg:text-8xl"
-          style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}
+          className="font-display uppercase text-5xl tracking-[0.08em] text-white sm:text-7xl lg:text-8xl"
+          style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}
         >
           {t('maternales.hero_title')}
         </motion.h1>
         <motion.p
           variants={fadeUp}
           className="mt-4 font-heading uppercase text-xl font-light text-white/80"
-          style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}
+          style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}
         >
           {t('maternales.hero_subtitle')}
         </motion.p>
@@ -154,8 +154,8 @@ function MaternalLineCard({ line, index, t }) {
           <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent pointer-events-none" />
         </div>
         <div className="p-6">
-          <div className="flex flex-wrap items-start justify-between gap-2">
-            <h3 className="font-heading uppercase text-xl font-semibold text-white" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>
+          <div className="flex items-center justify-between gap-3">
+            <h3 className="font-heading uppercase text-xl font-semibold text-white" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>
               {t(line.nameKey)}
             </h3>
             <span className="flex-shrink-0 rounded-full border border-gold/30 bg-gold/10 px-3 py-1 font-body text-xs text-gold">

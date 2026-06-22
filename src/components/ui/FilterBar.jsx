@@ -7,9 +7,9 @@ export default function FilterBar({ filters, setFilters, resultCount }) {
 
   const sexOptions = [
     { value: '', label: t('ventas.filter_all') },
-    { value: 'Yegua', label: 'Yegua' },
-    { value: 'Castrado', label: 'Castrado' },
-    { value: 'Macho', label: 'Macho' },
+    { value: 'Yegua', label: t('attr.sex.Yegua') },
+    { value: 'Castrado', label: t('attr.sex.Castrado') },
+    { value: 'Macho', label: t('attr.sex.Macho') },
   ];
 
   const ageOptions = [
@@ -74,7 +74,7 @@ export default function FilterBar({ filters, setFilters, resultCount }) {
           >
             <option value="">{t('ventas.filter_color')}: {t('ventas.filter_all')}</option>
             {colors.map((c) => (
-              <option key={c} value={c}>{c}</option>
+              <option key={c} value={c}>{t(`attr.color.${c}`)}</option>
             ))}
           </select>
 

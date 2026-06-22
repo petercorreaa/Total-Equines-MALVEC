@@ -43,5 +43,13 @@ export default {
       },
     },
   },
+  safelist: [
+    'font-display',
+    'font-heading',
+    'font-body',
+    'font-bold',
+    'font-semibold',
+    'uppercase',
+  ],
   plugins: [],
 }
