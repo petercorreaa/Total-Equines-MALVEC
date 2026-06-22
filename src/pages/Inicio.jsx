@@ -167,24 +167,31 @@ function IntroSection({ t }) {
       <div className="container-custom">
         <GoldDivider className="mb-16" />
 
-        <AnimatedSection className="mx-auto max-w-[900px] text-center">
-          <h2 className="font-heading uppercase text-2xl sm:text-4xl lg:text-5xl font-light leading-relaxed text-white" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase' }}>
-            {/* Split the quote to highlight "Total Equines" */}
-            {t('inicio.intro_quote').split('Total Equines').map((part, i, arr) => (
+        <AnimatedSection className="mx-auto max-w-[1200px] text-center">
+          <h2
+            className="uppercase text-3xl sm:text-4xl lg:text-5xl font-bold text-white text-center"
+            style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 700, fontSize: 'clamp(2rem, 4vw, 3rem)', lineHeight: 1, textTransform: 'uppercase' }}
+          >
+            {t('inicio.intro_quote').split('cabaña argentina').map((part, i, arr) => (
               <span key={i}>
                 {part}
                 {i < arr.length - 1 && (
-                  <span className="text-gradient-gold">Total Equines</span>
+                  <span
+                    style={{
+                      backgroundImage: 'linear-gradient(135deg, rgb(232, 201, 122), rgb(201, 168, 76), rgb(160, 120, 48))',
+                      backgroundClip: 'text',
+                      WebkitBackgroundClip: 'text',
+                      color: 'transparent',
+                      WebkitTextFillColor: 'transparent',
+                      display: 'inline-block',
+                    }}
+                  >
+                    cabaña argentina
+                  </span>
                 )}
               </span>
             ))}
           </h2>
-        </AnimatedSection>
-
-        <AnimatedSection delay={0.2} className="mx-auto mt-10 max-w-2xl text-center">
-          <p className="font-body text-lg leading-relaxed text-gray-400">
-            {t('inicio.intro_text')}
-          </p>
         </AnimatedSection>
 
         <GoldDivider className="mt-16" />
