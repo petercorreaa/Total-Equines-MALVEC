@@ -8,6 +8,12 @@ import Footer from '@/components/layout/Footer';
 import LoadingScreen from '@/components/layout/LoadingScreen';
 import PageTransition from '@/components/layout/PageTransition';
 import BackToTop from '@/components/ui/BackToTop';
+import Maintenance from '@/components/layout/Maintenance';
+
+// Site-wide gate: the client isn't ready to launch yet, so every route shows
+// the maintenance screen instead. Flip to false (or delete this block and the
+// early return below) when told to bring the site back up.
+const MAINTENANCE_MODE = true;
 
 const Inicio = lazy(() => import('@/pages/Inicio'));
 const Nosotros = lazy(() => import('@/pages/Nosotros'));
@@ -46,6 +52,10 @@ function AnimatedRoutes() {
 }
 
 function App() {
+  if (MAINTENANCE_MODE) {
+    return <Maintenance />;
+  }
+
   return (
     <BrowserRouter>
       <LanguageProvider>
