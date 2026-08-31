@@ -168,18 +168,44 @@ function IntroSection({ t }) {
       <div className="container-custom">
         <GoldDivider className="mb-16" />
 
-        <AnimatedSection className="mx-auto max-w-[900px] text-center">
-          <h2 className="font-heading uppercase text-2xl sm:text-4xl lg:text-5xl font-light leading-relaxed text-white" style={{ fontFamily: 'Couture, sans-serif', textTransform: 'uppercase', WebkitTextStroke: '0' }}>
-            {/* Split the quote to highlight "Total Equines" */}
-            {t('inicio.intro_quote').split('Total Equines').map((part, i, arr) => (
-              <span key={i}>
-                {part}
-                {i < arr.length - 1 && (
-                  <span className="text-gradient-gold">Total Equines</span>
-                )}
-              </span>
-            ))}
-          </h2>
+        <AnimatedSection className="mx-auto max-w-[1200px] text-center">
+          {(() => {
+            const quote = t('inicio.intro_quote');
+            // The highlighted phrase differs per language (the ES copy says
+            // "cabaña argentina", EN/ZH still say "Total Equines") — pick
+            // whichever one is actually present instead of hardcoding one.
+            const highlight = ['cabaña argentina', 'Total Equines'].find((phrase) =>
+              quote.includes(phrase)
+            );
+            const parts = highlight ? quote.split(highlight) : [quote];
+
+            return (
+              <h2
+                className="uppercase text-3xl sm:text-4xl lg:text-5xl font-bold text-white text-center"
+                style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 700, fontSize: 'clamp(2rem, 4vw, 3rem)', lineHeight: 1, textTransform: 'uppercase' }}
+              >
+                {parts.map((part, i, arr) => (
+                  <span key={i}>
+                    {part}
+                    {i < arr.length - 1 && (
+                      <span
+                        style={{
+                          backgroundImage: 'linear-gradient(135deg, rgb(232, 201, 122), rgb(201, 168, 76), rgb(160, 120, 48))',
+                          backgroundClip: 'text',
+                          WebkitBackgroundClip: 'text',
+                          color: 'transparent',
+                          WebkitTextFillColor: 'transparent',
+                          display: 'inline-block',
+                        }}
+                      >
+                        {highlight}
+                      </span>
+                    )}
+                  </span>
+                ))}
+              </h2>
+            );
+          })()}
         </AnimatedSection>
 
         <AnimatedSection delay={0.2} className="mx-auto mt-10 max-w-2xl text-center">

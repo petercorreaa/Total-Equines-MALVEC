@@ -75,7 +75,7 @@ function HeroSection({ t }) {
       <div className="absolute inset-0">
         <img decoding="async" loading="eager" fetchpriority="high"
           src="/assets/horses/total-lola.webp"
-          alt=""
+          alt="Yegua madre de polo en el establecimiento Total Equines"
           className="h-full w-full object-cover"
         />
       </div>

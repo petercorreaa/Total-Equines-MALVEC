@@ -71,7 +71,7 @@ function HeroSection({ t }) {
       <div className="absolute inset-0">
         <img decoding="async" loading="eager" fetchpriority="high"
           src="/assets/horses/total-eclipse.webp"
-          alt=""
+          alt="Padrillo de polo de la cabaña Total Equines, Argentina"
           className="h-full w-full object-cover"
         />
       </div>

@@ -53,7 +53,7 @@ function HeroSection({ t }) {
       <div className="absolute inset-0">
         <img loading="eager" decoding="async" fetchpriority="high"
           src="/assets/horses/total-gonna.webp"
-          alt=""
+          alt="Programa de cría de caballos de polo en Total Equines, Argentina"
           className="h-full w-full object-cover"
         />
       </div>

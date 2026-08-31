@@ -13,7 +13,7 @@
   "hero": {
     "label": "ARGENTINA · POLO · GENÉTICA DE ÉLITE",
     "title": "TOTAL EQUINES",
-    "subtitle": "Criando campeones para el mundo",
+    "subtitle": "Genética de Élite. Criada en Argentina.",
     "tagline": "Genética de Élite. Criada en Argentina.",
     "cta_primary": "VER CABALLOS",
     "cta_secondary": "CONÓCENOS",
@@ -21,7 +21,7 @@
     "est": "EST. 2024"
   },
   "inicio": {
-    "intro_quote": "Cada caballo que nace en Total Equines lleva consigo generaciones de excelencia, disciplina y la pasión inigualable del polo argentino.",
+    "intro_quote": "Somos una cabaña argentina especializada en la cría y venta de caballos de polo de alto rendimiento. Combinamos las mejores líneas genéticas nacionales e internacionales con el ambiente único de las pampas argentinas.",
     "intro_text": "Somos una cabaña dedicada a la cría selectiva de caballos de polo de alto rendimiento, combinando las mejores líneas genéticas del mundo con el ambiente único de las pampas argentinas.",
     "highlights_tradition_title": "Tradición Argentina",
     "highlights_tradition_text": "Décadas de experiencia criando los mejores caballos de polo del país, con un profundo respeto por la herencia ecuestre argentina.",
@@ -105,7 +105,7 @@
     "hero_label": "PROGRAMA DE CRÍA",
     "hero_title": "LA CRÍA",
     "hero_subtitle": "Genética de élite. Crianza con propósito.",
-    "intro_text": "Nuestro programa de cría combina décadas de experiencia con las últimas técnicas en genética equina. Seleccionamos rigurosamente cada cruce para maximizar las capacidades atléticas, el temperamento y la longevidad deportiva de nuestros ejemplares.",
+    "intro_text": "Nuestro programa de cría de caballos de polo combina décadas de experiencia con las últimas técnicas en genética equina argentina. Seleccionamos rigurosamente cada cruce para maximizar las capacidades atléticas, el temperamento y la longevidad deportiva. Cada ejemplar que nace en Total Equines está destinado a competir al más alto nivel del polo internacional.",
     "card1_label": "GENÉTICA MATERNA",
     "card1_title": "LÍNEAS MATERNAS",
     "card1_text": "Las yeguas que definen nuestras generaciones.",
@@ -115,19 +115,19 @@
     "card2_text": "Los sementales que marcan la diferencia.",
     "card2_cta": "CONOCER PADRILLOS",
     "phil_01_title": "Selección Rigurosa",
-    "phil_01_text": "Solo los ejemplares con el mejor historial deportivo y sanitario son elegidos para nuestro programa reproductor.",
+    "phil_01_text": "Solo los ejemplares con historial deportivo comprobado, sanidad certificada y conformación atlética superior ingresan a nuestro programa reproductor de caballos de polo.",
     "phil_02_title": "Diversidad Genética",
     "phil_02_text": "Combinamos líneas argentinas con las mejores genéticas internacionales para maximizar el potencial atlético.",
     "phil_03_title": "Seguimiento Individual",
     "phil_03_text": "Cada potrillo recibe un plan de desarrollo personalizado desde su nacimiento hasta su debut deportivo.",
     "phil_04_title": "Transparencia Total",
-    "phil_04_text": "Certificamos y documentamos cada paso del proceso. Nuestros compradores conocen el historial completo de cada animal."
+    "phil_04_text": "Certificamos y documentamos cada etapa del proceso reproductivo. Compradores nacionales e internacionales acceden al historial genético, sanitario y deportivo completo de cada caballo."
   },
   "maternales": {
     "hero_label": "LA CRÍA",
     "hero_title": "LÍNEAS MATERNAS",
     "hero_subtitle": "La base genética de nuestra cabaña.",
-    "intro_text": "Las líneas maternas son el corazón de Total Equines. Cada yegua madre fue seleccionada por su capacidad atlética, temperamento y capacidad de transmitir sus mejores características a su descendencia.",
+    "intro_text": "Las líneas maternas son el corazón del programa de cría de Total Equines. Cada yegua madre fue seleccionada por su capacidad atlética comprobada en cancha, su temperamento y su aptitud para transmitir excelencia genética a su descendencia. Son la base de cada campeón que sale de nuestra cabaña argentina.",
     "offspring_label": "DESCENDENCIA DESTACADA",
     "line_1_name": "Línea Pampa Real",
     "line_1_origin": "ARG",
@@ -164,7 +164,7 @@
     "hero_label": "LA CRÍA",
     "hero_title": "PADRILLOS",
     "hero_subtitle": "Los sementales que definen nuestra genética.",
-    "intro_text": "Nuestros padrillos son seleccionados con los criterios más exigentes del mundo del polo argentino. Cada semental combina un historial deportivo comprobado con las características físicas y el temperamento necesarios para transmitir excelencia a su descendencia.",
+    "intro_text": "Nuestros padrillos son seleccionados con los criterios más exigentes del polo argentino de alto handicap. Cada semental combina un historial deportivo comprobado, conformación atlética superior y el temperamento necesario para transmitir excelencia genética a su descendencia. Son la firma genética de Total Equines.",
     "breeding_label": "REGISTRO REPRODUCTIVO",
     "stat_handicap": "HANDICAP",
     "stat_descendants": "DESCENDIENTES",

@@ -75,7 +75,7 @@ function HeroSection({ t }) {
       <div className="absolute inset-0">
         <img loading="eager" decoding="async" fetchpriority="high"
           src="/assets/horses/total-rayo.webp"
-          alt=""
+          alt="Establecimiento Total Equines, cabaña de caballos de polo en la pampa argentina"
           className="h-full w-full object-cover"
         />
       </div>
@@ -177,14 +177,14 @@ function BrandStorySection({ t }) {
               <div className="img-fade-bottom rounded-3xl overflow-hidden">
                 <img decoding="async" loading="lazy"
                   src="/assets/horses/total-lola.webp"
-                  alt=""
+                  alt="Yeguas de polo pastando en el campo de Total Equines"
                   className="w-full rounded-3xl object-cover"
                 />
               </div>
               <div className="img-fade-bottom rounded-3xl overflow-hidden mt-4 lg:-mt-20 lg:ml-8 lg:w-4/5">
                 <img decoding="async" loading="lazy"
                   src="/assets/horses/total-eclipse.webp"
-                  alt=""
+                  alt="Padrillo de polo de la cabaña Total Equines"
                   className="w-full rounded-3xl border-4 border-black object-cover"
                 />
               </div>
