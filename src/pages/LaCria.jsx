@@ -86,7 +86,7 @@ function HeroSection({ t }) {
         </motion.p>
         <motion.h1
           variants={fadeUp}
-          className="font-display uppercase text-5xl tracking-[0.08em] text-white sm:text-7xl lg:text-9xl"
+          className="font-display uppercase text-4xl tracking-[0.08em] text-white sm:text-7xl lg:text-9xl"
           style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}
         >
           {t('lacria.hero_title')}
@@ -213,7 +213,7 @@ function PhilosophySection({ t }) {
           {philosophyPillars.map((pillar, i) => (
             <AnimatedSection key={pillar.num} delay={i * 0.1}>
               <div className="rounded-2xl border border-gold/15 bg-white/[0.04] backdrop-blur-sm p-8">
-                <span className="font-display uppercase text-5xl text-gold/30" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>
+                <span className="font-display uppercase text-3xl sm:text-5xl text-gold/30" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>
                   {pillar.num}
                 </span>
                 <h3 className="mt-3 font-heading uppercase text-xl font-semibold text-white" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>

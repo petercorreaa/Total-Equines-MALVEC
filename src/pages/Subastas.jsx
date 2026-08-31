@@ -71,7 +71,7 @@ function HeroSection({ t }) {
         <motion.p variants={fadeUp} className="mb-6 font-body text-xs uppercase tracking-[0.4em] text-gold">
           {t('subastas.hero_label')}
         </motion.p>
-        <motion.h1 variants={fadeUp} className="font-display uppercase text-6xl tracking-[0.08em] text-white sm:text-8xl lg:text-9xl" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>
+        <motion.h1 variants={fadeUp} className="font-display uppercase text-4xl tracking-[0.08em] text-white sm:text-8xl lg:text-9xl" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>
           {t('subastas.hero_title')}
         </motion.h1>
         <motion.p variants={fadeUp} className="mt-4 font-heading uppercase text-xl font-light text-white/80" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>
@@ -143,7 +143,7 @@ function FAQSection({ t }) {
           <p className="mb-4 font-body text-xs uppercase tracking-[0.4em] text-gold">
             {t('subastas.faq_label')}
           </p>
-          <h2 className="font-display uppercase text-6xl text-white" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>{t('subastas.faq_title')}</h2>
+          <h2 className="font-display uppercase text-3xl sm:text-6xl text-white" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>{t('subastas.faq_title')}</h2>
         </AnimatedSection>
 
         <div className="mx-auto max-w-3xl">
@@ -208,7 +208,7 @@ function NewsletterSection({ t }) {
       <div className="container-custom">
         <AnimatedSection className="mx-auto max-w-2xl text-center">
           <FiBell className="mx-auto mb-6 text-gold" size={48} />
-          <h2 className="font-display uppercase text-5xl text-white" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>{t('subastas.newsletter_title')}</h2>
+          <h2 className="font-display uppercase text-3xl sm:text-5xl text-white" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>{t('subastas.newsletter_title')}</h2>
           <p className="mt-4 font-body text-base text-gray-400">{t('subastas.newsletter_text')}</p>
 
           {submitted ? (
@@ -277,7 +277,7 @@ export default function Subastas() {
             <p className="mb-4 font-body text-xs uppercase tracking-[0.4em] text-gold">
               {t('subastas.upcoming_label')}
             </p>
-            <h2 className="font-display uppercase text-6xl text-white" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>{t('subastas.upcoming_title')}</h2>
+            <h2 className="font-display uppercase text-3xl sm:text-6xl text-white" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>{t('subastas.upcoming_title')}</h2>
           </AnimatedSection>
 
           <div className="space-y-12">
@@ -293,7 +293,7 @@ export default function Subastas() {
                 <p className="mb-4 font-body text-xs uppercase tracking-[0.4em] text-gold">
                   {t('subastas.past_label')}
                 </p>
-                <h2 className="font-display uppercase text-6xl text-white" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>{t('subastas.past_title')}</h2>
+                <h2 className="font-display uppercase text-3xl sm:text-6xl text-white" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>{t('subastas.past_title')}</h2>
               </AnimatedSection>
 
               <div className="space-y-12">

@@ -78,7 +78,7 @@ function AuctionCard({ auction, variant = 'upcoming' }) {
             <span>{auction.format}</span>
           </div>
 
-          <h3 className="mt-2 font-display uppercase text-4xl text-white" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>{auction.name}</h3>
+          <h3 className="mt-2 font-display uppercase text-2xl sm:text-4xl text-white" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>{auction.name}</h3>
           <p className="mt-1 font-heading uppercase text-lg font-light text-gray-400" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>
             {auction.subtitle}
           </p>

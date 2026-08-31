@@ -108,7 +108,7 @@ function HeroSection({ t }) {
         </motion.p>
         <motion.h1
           variants={fadeUp}
-          className="font-display uppercase text-5xl tracking-[0.08em] text-white sm:text-7xl lg:text-8xl"
+          className="font-display uppercase text-4xl tracking-[0.08em] text-white sm:text-7xl lg:text-8xl"
           style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}
         >
           {t('nosotros.hero_title')}
@@ -201,7 +201,7 @@ function TimelineItem({ item, index, t }) {
 
   const card = (
     <div className="rounded-2xl border border-gold/20 bg-white/[0.04] backdrop-blur-sm p-6">
-      <span className="font-display uppercase text-4xl text-gold" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>{item.year}</span>
+      <span className="font-display uppercase text-2xl sm:text-4xl text-gold" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>{item.year}</span>
       <h3 className="mt-2 font-heading uppercase text-xl font-semibold text-white" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>
         {t(item.titleKey)}
       </h3>

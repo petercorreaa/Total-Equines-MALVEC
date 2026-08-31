@@ -87,15 +87,9 @@ h4.font-display,
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
-  background: linear-gradient(
-    160deg,
-    #0a0a0a 0%,
-    #111111 25%,
-    #0d0d0d 50%,
-    #131313 75%,
-    #0a0a0a 100%
-  );
-  background-attachment: fixed;
+  /* Opaque base: guarantees the page is never white, so white text can never
+     end up white-on-white if the gradient layer below fails to paint. */
+  background-color: #0a0a0a;
   min-height: 100%;
 }
 
@@ -104,6 +98,26 @@ body {
   margin: 0;
   background: transparent;
   min-height: 100vh;
+}
+
+/* Page gradient as a viewport-fixed layer.
+   Replaces `background-attachment: fixed` on <html>, which mobile browsers
+   (iOS Safari especially) fail to paint past the first viewport — the page
+   went white below the fold and white headings became invisible. */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(
+    160deg,
+    #0a0a0a 0%,
+    #111111 25%,
+    #0d0d0d 50%,
+    #131313 75%,
+    #0a0a0a 100%
+  );
 }
 
 #root {
@@ -161,12 +175,14 @@ body {
   }
 }
 
+/* Mobile gutter is 1.25rem so cards never sit flush against the phone edge.
+   Overridden from 640px up, so desktop spacing is unchanged. */
 .container-custom {
   max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
 @media (min-width: 640px) {
@@ -277,4 +293,35 @@ img {
 .carousel-wrapper {
   overflow: hidden;
   width: 100%;
+}
+
+/* Maintenance page title: flat fill, no outline.
+   Extra class beats the h1.font-display stroke rules above on specificity. */
+h1.font-display.maintenance-title {
+  -webkit-text-stroke: 0 !important;
+}
+
+/* ============================================
+   MOBILE PAINT FIXES
+   Must stay last: these override the blanket GPU-layer promotions above.
+   Forcing a composited layer onto every image, every rounded card and every
+   overflow-hidden element blows past the layer budget on phones, which makes
+   tiles drop out mid-scroll — images and text painting as blank blocks.
+   Desktop keeps those hacks unchanged.
+============================================ */
+@media (max-width: 767px) {
+  img {
+    transform: none;
+  }
+
+  .overflow-hidden {
+    -webkit-mask-image: none;
+  }
+
+  .rounded-2xl,
+  .rounded-3xl,
+  [data-animated] {
+    transform: none;
+    backface-visibility: visible;
+  }
 }

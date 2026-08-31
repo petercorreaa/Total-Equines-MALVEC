@@ -261,7 +261,7 @@ function VentasPreviewSection({ t }) {
   return (
     <section className="section-padding section-tint">
       {/* Header */}
-      <AnimatedSection className="mb-14 text-center">
+      <AnimatedSection className="mb-14 px-5 text-center md:px-0">
         <span className="mb-4 inline-block font-body text-xs tracking-[0.4em] uppercase text-gold">
           {t('inicio.ventas_label')}
         </span>
@@ -274,7 +274,7 @@ function VentasPreviewSection({ t }) {
       </AnimatedSection>
 
       {/* 3-column grid using HorseCard */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto px-5 md:px-0">
         {previewHorses.map((horse, index) => (
           <AnimatedSection key={horse.id} delay={index * 0.1} direction="up">
             <HorseCard horse={horse} />
@@ -283,7 +283,7 @@ function VentasPreviewSection({ t }) {
       </div>
 
       {/* CTA */}
-      <AnimatedSection delay={0.3} className="mt-14 text-center">
+      <AnimatedSection delay={0.3} className="mt-14 px-5 text-center md:px-0">
         <Link
           to="/ventas"
           className="inline-block rounded-full border border-gold px-10 py-4 font-body text-sm uppercase tracking-widest text-gold transition-all duration-300 hover:bg-gold hover:text-black"

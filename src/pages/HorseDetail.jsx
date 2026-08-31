@@ -255,7 +255,7 @@ function RelatedSection({ horse, t }) {
     <section className="section-padding section-tint">
       <div className="container-custom">
         <AnimatedSection className="mb-12">
-          <h2 className="font-display uppercase text-4xl text-white" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>
+          <h2 className="font-display uppercase text-2xl sm:text-4xl text-white" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>
             {t('ventas.detail_related')}
           </h2>
         </AnimatedSection>
@@ -276,7 +276,7 @@ function NotFound({ t }) {
   return (
     <main className="flex min-h-screen items-center justify-center bg-transparent">
       <div className="text-center">
-        <h1 className="font-display uppercase text-6xl text-gold" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>404</h1>
+        <h1 className="font-display uppercase text-3xl sm:text-6xl text-gold" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>404</h1>
         <p className="mt-4 font-heading uppercase text-2xl font-semibold text-white" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>
           {t('ventas.detail_not_found')}
         </p>

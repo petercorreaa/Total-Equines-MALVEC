@@ -53,7 +53,7 @@ function CountdownTimer({ targetDate, auctionName, dateDisplay, location }) {
         <p className="mb-3 font-body text-xs uppercase tracking-[0.4em] text-gold">
           {t('subastas.countdown_label')}
         </p>
-        <h2 className="font-display uppercase text-5xl text-white" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>{auctionName}</h2>
+        <h2 className="font-display uppercase text-3xl sm:text-5xl text-white" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>{auctionName}</h2>
         <p className="mt-2 font-body text-base text-gray-400">
           {dateDisplay} · {location}
         </p>
@@ -76,7 +76,7 @@ function CountdownTimer({ targetDate, auctionName, dateDisplay, location }) {
                   </p>
                 </motion.div>
                 {i < blocks.length - 1 && (
-                  <span className="hidden font-display uppercase text-4xl text-gold/40 sm:block" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>:</span>
+                  <span className="hidden font-display uppercase text-2xl sm:text-4xl text-gold/40 sm:block" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>:</span>
                 )}
               </div>
             ))

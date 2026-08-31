@@ -53,7 +53,7 @@ function HeroSection({ t }) {
         <motion.p variants={fadeUp} className="mb-6 font-body text-xs uppercase tracking-[0.4em] text-gold">
           {t('contacto.hero_label')}
         </motion.p>
-        <motion.h1 variants={fadeUp} className="font-display uppercase text-6xl tracking-[0.08em] text-white sm:text-8xl lg:text-9xl" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>
+        <motion.h1 variants={fadeUp} className="font-display uppercase text-4xl tracking-[0.08em] text-white sm:text-8xl lg:text-9xl" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>
           {t('contacto.hero_title')}
         </motion.h1>
         <motion.p variants={fadeUp} className="mt-4 font-heading uppercase text-xl font-light text-white/80" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>
@@ -79,8 +79,12 @@ const countryCodes = [
   { flag: '🇨🇳', code: '+86' },
 ];
 
-const fieldClass =
-  'w-full rounded-2xl border border-gray-700 bg-gray-900 px-5 py-4 font-body text-base text-white placeholder-gray-500 outline-none transition-[border-color] duration-200 focus:border-gold focus:ring-1 focus:ring-gold/30';
+// Width is kept out of the base so fields that need a fixed width (the country
+// code select) can set their own — `w-full` would otherwise win the cascade.
+const fieldBase =
+  'rounded-2xl border border-gray-700 bg-gray-900 px-5 py-4 font-body text-base text-white placeholder-gray-500 outline-none transition-[border-color] duration-200 focus:border-gold focus:ring-1 focus:ring-gold/30';
+
+const fieldClass = `w-full ${fieldBase}`;
 
 function ContactForm({ t }) {
   const [searchParams] = useSearchParams();
@@ -142,7 +146,7 @@ function ContactForm({ t }) {
           <circle cx="32" cy="32" r="30" stroke="#c9a84c" strokeWidth="2" />
           <path d="M20 32l8 8 16-16" stroke="#c9a84c" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
-        <h2 className="font-display uppercase text-5xl text-gold" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>{t('contacto.success_title')}</h2>
+        <h2 className="font-display uppercase text-3xl sm:text-5xl text-gold" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>{t('contacto.success_title')}</h2>
         <p className="mt-4 font-body text-lg text-gray-300">{t('contacto.success_text')}</p>
         <Link
           to="/"
@@ -161,7 +165,7 @@ function ContactForm({ t }) {
       <p className="mb-2 font-body text-xs uppercase tracking-[0.4em] text-gold">
         {t('contacto.form_label')}
       </p>
-      <h2 className="font-display uppercase text-5xl text-white" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>{t('contacto.form_title')}</h2>
+      <h2 className="font-display uppercase text-3xl sm:text-5xl text-white" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>{t('contacto.form_title')}</h2>
       <div className="mt-4 h-px w-[60px] bg-gold" />
 
       <AnimatePresence>
@@ -223,7 +227,7 @@ function ContactForm({ t }) {
               value={form.countryCode}
               onChange={handleChange}
               disabled={disabled}
-              className={`${fieldClass} w-32 flex-shrink-0`}
+              className={`${fieldBase} w-28 flex-shrink-0 sm:w-32`}
             >
               {countryCodes.map((cc) => (
                 <option key={cc.code} value={cc.code}>
@@ -239,7 +243,7 @@ function ContactForm({ t }) {
               value={form.phone}
               onChange={handleChange}
               placeholder={t('contacto.field_phone_ph')}
-              className={`${fieldClass} flex-1`}
+              className={`${fieldClass} min-w-0 flex-1`}
             />
           </div>
         </div>
@@ -333,7 +337,7 @@ function ContactInfo({ t }) {
     <div className="lg:sticky lg:top-24 lg:self-start">
       {/* Block 1 — Direct Contact */}
       <AnimatedSection direction="right">
-        <h3 className="font-display uppercase text-4xl text-white" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>{t('contacto.info_title')}</h3>
+        <h3 className="font-display uppercase text-2xl sm:text-4xl text-white" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>{t('contacto.info_title')}</h3>
         <div className="mt-4 h-px w-[60px] bg-gold" />
 
         <div className="mt-6">
@@ -431,7 +435,7 @@ function MapSection({ t }) {
           <p className="mb-4 font-body text-xs uppercase tracking-[0.4em] text-gold">
             {t('contacto.map_label')}
           </p>
-          <h2 className="font-display uppercase text-6xl text-white" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>{t('contacto.map_title')}</h2>
+          <h2 className="font-display uppercase text-3xl sm:text-6xl text-white" style={{ fontFamily: 'Couture, sans-serif', fontWeight: 700, textTransform: 'uppercase', WebkitTextStroke: '0.015em currentColor', fontSynthesis: 'none' }}>{t('contacto.map_title')}</h2>
         </AnimatedSection>
 
         <AnimatedSection className="mx-auto max-w-5xl">
